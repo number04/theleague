@@ -1,0 +1,104 @@
+.container-login
+    @include flexbox-center-wrap
+
+    @media only screen and (min-width: 768px)
+        @include background('../img/icons-wire.svg')
+
+    &.full-height
+        height: 100vh
+
+    > span
+        text-align: center
+        position: relative
+        top: -36px
+        color: $text-color-grey
+        font-weight: 100
+        font-size: 48px
+        width: 100%
+
+        @media only screen and (min-width: 414px)
+            font-size: 56px
+
+        @media only screen and (min-width: 768px)
+            font-size: 72px
+
+        @media only screen and (min-width: 1024px)
+            font-size: 80px
+
+//login form
+
+.form-login
+    margin: auto
+
+    > div
+        position: relative
+        margin: 20px 0px 20px 0px
+
+input[type="email"], input[type="password"]
+    padding-left: 32px
+    font-size: 18px
+    color: $grey
+    background-color: $off-white
+    height: 40px
+    border: none
+    border-bottom: 1px solid $grey
+    width: 260px
+    border-radius: 0px
+
+input:-webkit-autofill
+    -webkit-box-shadow: 0 0 0px 1000px $off-white inset
+    -webkit-text-fill-color: $grey !important
+
+.label
+    color: $grey
+    font-weight: 400
+    position: absolute
+    pointer-events: none
+    left: 2px
+    top: 14px
+    letter-spacing: 1px
+    opacity: 1
+    @include transition(all .3s ease-in-out)
+
+.label-icon
+    @extend .label
+    opacity: 0
+    left: 100px
+
+    i
+        color: darken($grey, 10%)
+
+    .fa-lock
+        font-size: 20px
+
+input:focus ~ .label, input:valid ~ .label
+    left: 80px
+    opacity: 0
+
+input:focus ~ .label-icon, input:valid ~ .label-icon
+    left: 4px
+    opacity: 1
+
+.btn-login
+    width: 100%
+    padding: 6px 0px
+    border-radius: 2px
+    margin-top: 12px
+    font-size: 14px
+    text-align: center
+    border: none
+    color: $white
+    background-color: $grey
+    text-transform: uppercase
+    cursor: pointer
+
+div.checkbox label span
+        position: relative
+        font-size: 14px
+        padding-left: 8px
+        color: lighten($grey, 20%)
+
+
+.has-error input[type="email"], .has-error input[type="password"]
+    box-shadow: 0 1px 0px rgb(209,72,72)
+    border-bottom: 1px solid rgb(209,72,72)

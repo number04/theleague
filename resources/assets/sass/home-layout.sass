@@ -1,0 +1,361 @@
+
+.container-home
+    @include flexbox-center-wrap
+    margin: auto
+
+    // container-one
+    > div:first-of-type
+        width: 100%
+        max-width: 414px
+        height: 1600px
+        margin: 12px 6px 3px 6px
+        @include flexbox-center-wrap
+
+        // recent activity - skaters
+        > div:nth-child(1)
+            width: 100%
+            height: calc(40% - 3px)
+            background-color: $white
+            border-radius: 2px
+            box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+            margin-right: 0px
+            margin-bottom: 3px
+
+        // container
+        > div:nth-child(2)
+            @include flexbox-center-wrap
+            width: 100%
+            height: calc(60% - 3px)
+            margin-left: 0px
+            margin-top: 3px
+
+            // container
+            > div:nth-child(1)
+                @include flexbox-center-wrap
+                width: 100%
+                height: calc(66.66% - 3px)
+                margin-bottom: 3px
+
+                // recent acvitiy - goalies
+                > div:nth-child(1)
+                    width: 100%
+                    height: calc(50% - 3px)
+                    background-color: $white
+                    border-radius: 2px
+                    box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                    margin-bottom: 3px
+                    margin-right: 0px
+
+
+                // message board
+                > div:nth-child(2)
+                    width: 100%
+                    height: calc(50% - 3px)
+                    background-color: $white
+                    border-radius: 2px
+                    box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                    margin-top: 3px
+                    margin-left: 0px
+
+
+            // transactions
+            > div:nth-child(2)
+                width: 100%
+                height: calc(33.33% - 3px)
+                background-color: $white
+                border-radius: 2px
+                box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                margin-top: 3px
+
+
+    // container-two
+    > div:last-of-type
+        width: 100%
+        max-width: 414px
+        height: 960px
+        margin: 3px 6px 12px 6px
+        @include flexbox-center-wrap
+
+        //container
+        > div:nth-child(1)
+            @include flexbox-center-wrap
+            width: 100%
+            height: calc(66.66% - 3px)
+            margin-left: 0px
+            margin-bottom: 3px
+
+            // trade notice
+            > div:nth-child(1)
+                width: 100%
+                height: calc(20% - 3px)
+                background-color: $white
+                border-radius: 2px
+                box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                margin-bottom: 3px
+
+
+            > div:nth-child(2)
+                @include flexbox-center-wrap
+                width: 100%
+                height: calc(80% - 3px)
+                margin-top: 3px
+
+                // huddy
+                > div:nth-child(1)
+                    width: 100%
+                    height: calc(50% - 3px)
+                    background-color: $white
+                    border-radius: 2px
+                    box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                    margin-bottom: 3px
+                    margin-right: 0px
+
+
+                // gretzky
+                > div:nth-child(2)
+                    width: 100%
+                    height: calc(50% - 3px)
+                    background-color: $white
+                    border-radius: 2px
+                    box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                    margin-top: 3px
+                    margin-left: 0px
+
+
+        // standings
+        > div:nth-child(2)
+            width: 100%
+            height: calc(33.33% - 3px)
+            background-color: $white
+            border-radius: 2px
+            box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+            margin-right: 0px
+            margin-top: 3px
+
+@media only screen and (min-width: 694px)
+    .container-home
+        @include flexbox-center-wrap
+        margin: auto
+
+        // container-one
+        > div:first-of-type
+            position: relative
+            max-width: 828px
+            height: 960px
+            margin: 24px 12px 6px 12px
+            @include flexbox-center
+            flex-wrap: nowrap
+
+
+            // recent activity - skaters
+            > div:nth-child(1)
+                position: absolute
+                width: calc(50% - 6px)
+                height: calc(66.66% - 6px)
+                margin-right: 6px
+                margin-bottom: 0px
+                border-radius: 2px
+                left: 0px
+                top: 0px
+
+            // container
+            > div:nth-child(2)
+                height: 100%
+                margin-left: 0px
+                margin-top: 0px
+                @include flexbox-center-wrap
+
+                // container
+                > div:nth-child(1)
+                    width: 50%
+                    height: calc(66.66% - 6px)
+                    margin-bottom: 6px
+                    margin-left: auto
+                    @include flexbox-center-wrap
+
+
+                    // recent activity - goalies
+                    > div:nth-child(1)
+                        width: calc(100% - 6)
+                        height: calc(50% - 6px)
+                        margin-right: 0px
+                        margin-left: 6px
+                        margin-bottom: 6px
+
+                    // message board
+                    > div:nth-child(2)
+                        width: calc(100% - 6)
+                        height: calc(50% - 6px)
+                        margin-left: 6px
+                        margin-top: 6px
+
+                // transactions
+                > div:nth-child(2)
+                    height: calc(33.33% - 6px)
+                    background-color: $white
+                    border-radius: 2px
+                    box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                    margin-top: 6px
+
+        // container-two
+        > div:last-of-type
+            max-width: 828px
+            height: 640px
+            margin: 6px 12px 24px 12px
+            @include flexbox-center
+
+
+            // container
+            > div:nth-child(1)
+                @include flexbox-center-wrap
+                margin-right: 0px
+                margin-top: 0px
+                margin-bottom: 6px
+                height: calc(50% - 6px)
+
+                // trade notice
+                > div:nth-child(1)
+                    height: calc(20% - 6px)
+                    margin-bottom: 6px
+
+                // container
+                > div:nth-child(2)
+                    height: calc(80% - 12px)
+                    margin-top: 6px
+                    margin-bottom: 6px
+                    @include flexbox-center
+
+                    // huddy
+                    > div:nth-child(1)
+                        width: calc(50% - 6px)
+                        height: 100%
+                        margin-right: 6px
+                        margin-bottom: 0px
+
+                    // gretz
+                    > div:nth-child(2)
+                        width: calc(50% - 6px)
+                        height: 100%
+                        margin-left: 6px
+                        margin-top: 0px
+
+            // standings
+            > div:nth-child(2)
+                height: calc(50% - 6px)
+                margin-left: 0px
+                margin-bottom: 6px
+                margin-top: 6
+
+@media only screen and (min-width: 981px)
+    .container-home
+        @include flexbox-center-wrap
+        margin: auto
+
+        // container-one
+        > div:first-of-type
+            position: static
+            max-width: 1242px
+            height: 640px
+            margin: 24px 12px 6px 12px
+            @include flexbox-center
+            flex-wrap: nowrap
+
+
+            // recent activity - skaters
+            > div:nth-child(1)
+                position: static
+                width: calc(33.33% - 6px)
+                height: 100%
+                margin-right: 6px
+                margin-bottom: 0px
+
+
+            // container
+            > div:nth-child(2)
+                width: calc(66.66% - 6px)
+                height: 100%
+                margin-left: 6px
+                margin-top: 0px
+                @include flexbox-center-wrap
+
+                // container
+                > div:nth-child(1)
+                    width: 100%
+                    height: calc(50% - 6px)
+                    margin-bottom: 6px
+                    @include flexbox-center
+                    flex-wrap: nowrap
+
+                    // recent activity - goalies
+                    > div:nth-child(1)
+                        width: calc(100% - 6px)
+                        height: 100%
+                        margin-right: 6px
+                        margin-bottom: 0px
+                        margin-left: 0px
+
+                    // message board
+                    > div:nth-child(2)
+                        width: calc(100% - 6px)
+                        height: 100%
+                        margin-left: 6px
+                        margin-top: 0px
+
+                //transactions
+                > div:nth-child(2)
+                    height: calc(50% - 6px)
+                    margin-top: 6px
+                    border-radius: 2px
+
+        // container-two
+        > div:last-of-type
+            max-width: 1242px
+            height: 320px
+            margin: 6px 12px 24px 12px
+            @include flexbox-center
+            flex-wrap: nowrap
+
+            // container
+            > div:nth-child(1)
+                width: calc(66.66% - 6px)
+                height: 100%
+                margin-right: 6px
+                margin-top: 0px
+                margin-bottom: 0px
+                @include flexbox-center-wrap
+
+                // trade notice
+                > div:nth-child(1)
+                    height: calc(20% - 6px)
+                    margin-bottom: 6px
+
+                // container
+                > div:nth-child(2)
+                    width: 100%
+                    height: calc(80% - 6px)
+                    margin-top: 6px
+                    margin-bottom: 0px
+                    @include flexbox-center
+                    flex-wrap: nowrap
+
+                    // huddy
+                    > div:nth-child(1)
+                        width: calc(100% - 6px)
+                        height: 100%
+                        margin-right: 6px
+                        margin-bottom: 0px
+
+                    // gretzky
+                    > div:nth-child(2)
+                        width: calc(100% - 6px)
+                        height: 100%
+                        margin-left: 6px
+                        margin-top: 0px
+
+            // standnigs
+            > div:nth-child(2)
+                width: calc(33.33% - 6px)
+                height: 100%
+                margin-left: 6px
+                margin-bottom: 0px
+                margin-top: 0px

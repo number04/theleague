@@ -1,0 +1,61 @@
+// flexbox
+
+@mixin flexbox-center
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: center
+
+@mixin flexbox-center-wrap
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: center
+    flex-wrap: wrap
+
+    display: -webkit-flex
+    -webkit-flex-wrap: wrap
+
+// transitions
+
+@mixin transition($argument ...)
+    -webkit-transition: $argument
+    -moz-transition: $argument
+    -ms-transition: $argument
+    -o-transition: $argument
+    transition: $argument
+
+// transforms
+
+@mixin transform($argument)
+    -webkit-transform: $argument
+    -moz-transform: $argument
+    -ms-transform: $argument
+    -o-transform: $argument
+    transform: $argument
+
+@mixin rotate ($deg)
+    @include transform(rotate($deg))
+
+@mixin scale3d($x,$y,$z)
+	@include transform(scale3d($x,$y,$z))
+
+// animations
+
+@mixin animation($argument)
+    -webkit-animation: $argument
+    -moz-animation: $argument
+    -ms-animation: $argument
+    -o-animation: $argument
+    animation: $argument
+
+// background image
+
+@mixin background($path, $position: 50%, $repeat: no-repeat)
+    background:
+        image: url($path)
+        position: $position
+        repeat: $repeat
+        size: cover
+
+//

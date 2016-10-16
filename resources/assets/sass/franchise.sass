@@ -1,0 +1,566 @@
+.container-franchise > div
+
+    // header and logo
+    &:nth-child(1)
+        width: 100%
+        background-color: $white
+        padding: 60px 0px 90px
+        @include flexbox-center
+
+        img
+            height: 220px
+            width: auto
+
+    // franchise information
+    &:nth-child(2)
+        position: relative
+        top: -24px
+        margin: auto
+        width: 96%
+        max-width: 1440px
+        background-color: $white
+        border-radius: 3px
+        height: 300px
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+
+        > span
+            width: 100%
+            display: block
+            line-height: 48px
+            text-align: center
+            color: $white
+            letter-spacing: 2px
+            font-size: 26px
+            text-transform: uppercase
+            border-top-left-radius: 3px
+            border-top-right-radius: 3px
+
+            @for $i from 1 through 8
+                &.#{franchise}-#{$i}
+                    background-color: nth($franchise-colors, $i)
+
+    // roster form
+    &:nth-child(3)
+        width: 96%
+        max-width: 1440px
+        margin: auto
+
+        .button
+            text-align: center
+            margin-top: -8px
+            margin-bottom: 16px
+            @include flexbox-center-wrap
+
+            input.submit
+                width: 100%
+                margin-bottom: 8px
+                //border: none
+                //display: block
+                border-radius: 3px
+                background-color: $white
+                text-transform: capitalize
+                line-height: 32px
+                cursor: pointer
+                box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+                @include transition(all .1s ease-in-out)
+
+                @for $i from 1 through 8
+                    &.#{franchise}-#{$i}
+                        border: 2px solid nth($franchise-colors, $i)
+                        color: nth($franchise-colors, $i)
+
+                        &:hover
+                            background-color: nth($franchise-colors, $i)
+                            color: $white
+
+            a
+                @extend input.submit
+                //margin-left: 4px
+
+                &:last-child
+                    margin-bottom: -8px
+
+            .active
+                @for $i from 1 through 8
+                    &.#{franchise}-#{$i}
+                        background-color: nth($franchise-colors, $i)
+                        color: $white
+
+        .count-replace
+            margin-bottom: 8px
+            height: 36px
+            display: none
+
+        .count
+            margin-bottom: 8px
+            background-color: $white
+            border-radius: 3px
+            text-align: center
+            line-height: 36px
+            height: 36px
+            box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+
+            > span
+                font-size: 16px
+
+                &:nth-child(-n+2)
+                    font-weight: 700
+
+                &:nth-child(2)
+                    padding-right: 6px
+
+            &.sticky
+                position: fixed
+                margin-top: 0px
+                width: 100%
+                background-color: $white
+                top: 0px
+                left: 0px
+                z-index: 100
+                border-radius: 0px
+                box-shadow: 0 2px 0 0 rgba(0,0,0,.1)
+
+        // show table
+        .table
+            background-color: $white
+            border-radius: 3px
+            box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+            margin-bottom: 16px
+            @include flexbox-center-wrap
+
+            > div
+                padding-top: 2px
+
+            // header - changed
+            .th
+                display: none
+                width: 100%
+
+                ul
+                    list-style: none
+                    border-bottom: 2px solid $off-white
+                    @include flexbox-center
+
+                li
+                    text-align: center
+                    font-weight: 200
+                    text-transform: uppercase
+                    font-size: 14px
+                    line-height: 32px
+
+                    // positon
+                    &:nth-child(1)
+                        width: 7%
+
+                    // player name
+                    &:nth-child(2)
+                        width: 27%
+
+                    // info
+                    &:nth-child(n+3):nth-child(-n+6)
+                        width: 6.5%
+
+                    // schedule
+                    &:nth-child(7)
+                        text-transform: capitalize
+                        width: 45.5%
+                        display: none
+
+                        &.show
+                            display: inline
+
+                    // statistics
+                    &:nth-child(n+8)
+                        @extend :nth-child(n+3):nth-child(-n+6)
+
+                        &.hide
+                            display: none
+
+            // rows
+            .tr
+                width: 100%
+                text-align: center
+                background-color: transparent
+                border-bottom: 2px solid $off-white
+                @include flexbox-center-wrap
+
+                &:hover
+                    background-color: $white
+
+                > div
+                    height: 40px
+                    line-height: 40px
+                    text-align: center
+
+                    // positon
+                    &:nth-child(1)
+                        width: 15%
+                        @include flexbox-center
+
+                        > label
+                            position: relative
+                            display: inline-block
+                            width: 32px
+                            height: 32px
+
+                            // checkbox
+                            > input
+                                display: none
+
+                                &:checked + div > span
+                                    color: $white
+
+                                &:checked
+                                    @for $i from 1 through 8
+                                        + .#{franchise}-#{$i}:before
+                                            background-color: nth($franchise-colors, $i)
+
+                                &:checked.flex
+                                    @for $i from 1 through 8
+                                        + .#{franchise}-#{$i}:before
+                                            background-color: lighten(nth($franchise-colors, $i), 30%)
+
+                                &:disabled + div
+                                    cursor: default
+
+
+                                &:disabled + div > span
+                                    color: $white
+
+
+                                &:disabled + div:before
+                                    background-color: $light-grey
+                                    border: 2px solid $light-grey
+
+                            > div
+                                position: absolute
+                                cursor: pointer
+                                top: 0
+                                left: 0
+                                right: 0
+                                bottom: 0
+                                @include flexbox-center
+
+                                > span
+                                    position: relative
+                                    font-weight: 400
+
+                                    @for $i from 1 through 8
+                                        .#{franchise}-#{$i}
+                                            color: nth($franchise-colors, $i)
+
+                                &:before
+                                    position: absolute
+                                    content: ""
+                                    height: 28px
+                                    width: 28px
+                                    top: 0
+                                    left: 0
+                                    right: 0
+                                    bottom: 0
+                                    border-radius: 50%
+                                    @include transition(all .3s ease-in-out)
+
+                            @for $i from 1 through 8
+                                .#{franchise}-#{$i}:before
+                                    border: 2px solid nth($franchise-colors, $i)
+
+                    // player name
+                    &:nth-child(2)
+                        width: 70%
+
+                        span
+                            font-weight: 300
+
+                            + span
+                                margin-left: 2px
+                                font-weight: 700
+                                display: none
+
+                                &.show
+                                    display: inline
+
+                            // injury icon
+                            + span + span
+                                color: $injury-red
+                                position: relative
+                                top: 2px
+                                font-weight: 300
+                                margin-left: 6px
+                                display: inline
+
+                    // info
+                    &:nth-child(n+3):nth-child(-n+5)
+                        display: none
+                        width: 6.5%
+                        text-transform: uppercase
+                        font-weight: 200
+
+                    &:nth-child(6)
+                        display: inline
+                        width: 15%
+                        text-transform: uppercase
+                        font-weight: 200
+
+                    // small screen header
+                    &:nth-child(7)
+                        width: 100%
+
+                        > ul
+                            padding-top: 8px
+                            height: 20px
+                            line-height: 20px
+                            @include flexbox-center
+
+                            > li
+                                list-style: none
+                                width: 14.285%
+                                font-weight: 200
+                                text-transform: uppercase
+                                font-size: 14px
+
+
+                                &:nth-child(1)
+                                    display: none
+                                    width: 100%
+
+                                    &.show
+                                        display: inline
+
+                                &:nth-child(n+2):nth-child(-n+8)
+                                    &.hide
+                                        display: none
+
+                    // statistics
+                    &:nth-child(n+8):nth-child(-n+14)
+                        height: 36px
+                        line-height: 36px
+                        width: 14.285%
+                        font-weight: 400
+                        margin-top: -16px
+
+                        &.hide
+                            display: none
+
+                    // schedule
+                    &:nth-child(n+15):nth-child(-n+27)
+                        @extend :nth-child(n+8):nth-child(-n+14)
+                        font-size: 13px
+                        text-transform: uppercase
+                        display: none
+
+                        &.show
+                            display: inline
+
+                    // - changed
+                    ~ span
+                        margin-top: -16px
+                        width: 0.001%
+                        position: relative
+                        right: 2px
+                        display: none
+
+                        &.show
+                            display: inline
+
+                &:last-child
+                    border-bottom: none
+
+        div:nth-of-type(5).table, div:nth-of-type(7).table
+            @extend .table
+            background-color: $injury-red
+            margin-top: -8px
+
+            &.no-table
+                display: none
+
+            .tr
+                &:hover
+                    background-color: $injury-red
+                    border-radius: 3px
+
+                > div
+                    color: $white
+
+                    &:nth-child(2)
+                        > span
+                            color: $white
+
+                    &:nth-child(7)
+                        > ul
+                            > li
+                                color: $white
+
+                    &:nth-child(n+15):nth-child(-n+27)
+                        ~ span
+                            color: $white
+
+        div:nth-of-type(9).table, div:nth-of-type(10).table
+            @extend .table
+            background-color: darken($off-white, 10%)
+
+            &.no-table
+                display: none
+
+            .tr
+                &:hover
+                    background-color: darken($off-white, 10%)
+
+@media only screen and (min-width: 320px)
+    .container-franchise > div
+
+        // franchise information
+        &:nth-child(2)
+            > span
+                font-size: 22px
+
+@media only screen and (min-width: 414px)
+    .container-franchise > div
+
+        // franchise information
+        &:nth-child(2)
+            > span
+                font-size: 24px
+
+@media only screen and (min-width: 507px)
+    .container-franchise > div
+
+        // franchise information
+        &:nth-child(2)
+            width: 89%
+
+        // roster form
+        &:nth-child(3)
+            width: 89%
+
+@media only screen and (min-width: 768px)
+    .container-franchise > div
+        &:nth-child(3)
+
+            .button
+                flex-wrap: nowrap
+
+                input.submit
+                    margin-bottom: 0px
+
+                a
+                    @extend input.submit
+                    margin-left: 4px
+
+                    &:last-child
+                        margin-bottom: 0px
+
+            .table
+                .tr
+                    > div
+                        // player name
+                        &:nth-child(2)
+                            span
+                                font-size: 18px
+
+                        // statistics
+                        &:nth-child(n+8):nth-child(-n+14)
+                            font-size: 18px
+
+@media only screen and (min-width: 981px)
+    .container-franchise > div
+
+        // franchise information
+        &:nth-child(2)
+            width: 96%
+            max-width: 1440px
+
+            > span
+                letter-spacing: 2px
+                font-size: 26px
+
+        // roster form
+        &:nth-child(3)
+            width: 96%
+            max-width: 1440px
+
+            .button
+                flex-wrap: nowrap
+
+                input.submit
+                    margin-bottom: 0px
+                    font-size: 18px
+
+                a
+                    @extend input.submit
+                    margin-left: 4px
+
+                    &:last-child
+                        margin-bottom: 0px
+
+            .count
+                > span
+                    font-size: 20px
+
+            // show table
+            .table
+                > div
+                    padding-top: 0px
+
+                    &:nth-child(2)
+                        padding-top: 2px
+
+                    &:last-child
+                        padding-bottom: 2px
+
+                // header
+                .th
+                    width: 100%
+                    display: inline
+
+                // rows
+                .tr
+                    border-bottom: none
+                    flex-wrap: nowrap
+
+                    &:hover
+                        background-color: $off-white
+
+                    > div
+                        // positon
+                        &:nth-child(1)
+                            width: 7%
+
+                        // player name
+                        &:nth-child(2)
+                            width: 27%
+                            text-align: left
+
+                            span
+                                font-size: 16px
+
+                        // info
+                        &:nth-child(n+3):nth-child(-n+5)
+                            display: inline
+
+                        &:nth-child(6)
+                            width: 6.5%
+
+                        // small screen header
+                        &:nth-child(7)
+                            display: none
+
+                        // statistics
+                        &:nth-child(n+8):nth-child(-n+14)
+                            width: 6.5%
+                            font-weight: 400
+                            font-size: 16px
+                            margin-top: 0px
+
+                        ~ span
+                            margin-top: 0px
+
+@media only screen and (min-width: 1440px)
+    .container-franchise > div
+        &:nth-child(3)
+            .table
+                .tr
+                    > div
+                        // statistics
+                        &:nth-child(n+8):nth-child(-n+14)
+                            font-size: 18px

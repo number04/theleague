@@ -1,0 +1,67 @@
+*
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font-family: $font-family-raleway
+    font-weight: 300
+    font-size: $font-size-base
+    color: $text-color-black
+    text-decoration: none
+    outline: none
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+
+html, body
+    background-color: $off-white
+
+input[type=submit]
+    -webkit-appearance: none
+
+input:focus
+    outline: none
+
+.container-all.overflow
+    position: fixed
+    width: 100%
+
+.alert
+    position: absolute
+    top: 80px
+    left: 0px
+    right: 0px
+    height: 36px
+    line-height: 36px
+    z-index: 10
+
+    > span
+        font-weight: 400
+        margin-right: auto
+        padding-left: 12px
+
+    > button
+        position: absolute
+        background-color: transparent
+        cursor: pointer
+        font-size: 18px
+        top: 6px
+        right: 16px
+        font-weight: 400
+
+    &.alert-success
+        background-color: rgb(80,138,81)
+
+        > span, > button
+            color: $white
+
+    &.alert-fail
+        background-color: rgb(169,68,66)
+
+        > span, > button
+            color: $white
+
+    &.alert-warning
+        background-color: rgb(158,129,79)
+
+        > span, > button
+            color: $white

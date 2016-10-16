@@ -1,0 +1,428 @@
+.container-player
+    > div
+        // spacer
+        &:nth-child(1)
+            width: 100%
+            background-color: $white
+            padding: 30px 0px 30px
+
+        // search and filter
+        &:nth-child(2)
+            position: relative
+            top: -24px
+            margin: auto
+            width: 96%
+            max-width: 1440px
+            background-color: $white
+            border-radius: 3px
+            box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+
+            > span
+                width: 100%
+                display: block
+                line-height: 42px
+                text-align: center
+                background-color: $grey
+                color: $white
+                letter-spacing: 2px
+                font-size: 20px
+                text-transform: uppercase
+                border-top-left-radius: 3px
+                border-top-right-radius: 3px
+
+    .button
+        width: 96%
+        max-width: 1440px
+        text-align: center
+        margin: auto
+        margin-bottom: 16px
+        @include flexbox-center
+
+        a
+            width: 100%
+            // small screen bottom add to last-child
+            // margin-bottom: 8px
+            //border: none
+            //display: block
+            border-radius: 3px
+            //border: 2px solid $light-grey
+            background-color: $white
+            text-transform: capitalize
+            font-size: 18px
+            line-height: 32px
+            cursor: pointer
+            box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+            @include transition(all .1s ease-in-out)
+
+            &:nth-child(1)
+                margin-right: 4px
+
+            &:nth-child(2)
+                margin-left: 4px
+
+            &:hover
+                background-color: $grey
+                color: $white
+
+
+        .active
+            background-color: $grey
+            color: $white
+
+    // show table
+    .table
+        background-color: $white
+        border-radius: 3px
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+        margin: auto
+        margin-bottom: 16px
+        @include flexbox-center-wrap
+
+        > div
+            padding-top: 2px
+
+        // header - changed
+        .th
+            display: none
+            width: 100%
+
+            ul
+                list-style: none
+                border-bottom: 2px solid $off-white
+                @include flexbox-center
+
+            li
+                text-align: center
+                font-weight: 200
+                text-transform: uppercase
+                font-size: 14px
+                line-height: 32px
+
+                // positon
+                &:nth-child(1)
+                    width: 7%
+
+                // player name
+                &:nth-child(2)
+                    width: 27%
+
+                // info
+                &:nth-child(n+3):nth-child(-n+7)
+                    width: 5.5%
+
+                // schedule
+                &:nth-child(8)
+                    text-transform: capitalize
+                    width: 38.5%
+                    display: none
+
+                    &.show
+                        display: inline
+
+                // statistics
+                &:nth-child(n+9)
+                    @extend :nth-child(n+3):nth-child(-n+7)
+
+                    &.hide
+                        display: none
+
+        // rows
+        .tr
+            width: 100%
+            text-align: center
+            background-color: transparent
+            border-bottom: 2px solid $off-white
+            @include flexbox-center-wrap
+
+            &:hover
+                background-color: $white
+
+            > div
+                height: 40px
+                line-height: 40px
+                text-align: center
+
+                // positon
+                &:nth-child(1)
+                    width: 15%
+
+                // player name
+                &:nth-child(2)
+                    width: 70%
+
+                    span
+                        font-weight: 300
+
+                        + span
+                            margin-left: 2px
+                            font-weight: 700
+                            display: none
+
+                            &.show
+                                display: inline
+
+                        // injury icon
+                        + span + span
+                            color: $injury-red
+                            position: relative
+                            top: 2px
+                            font-weight: 300
+                            margin-left: 6px
+                            display: inline
+
+                // info
+                &:nth-child(3)
+                    display: inline
+                    width: 15%
+                    text-transform: uppercase
+                    font-weight: 200
+                    font-size: 14px
+
+                &:nth-child(n+4):nth-child(-n+7)
+                    display: none
+                    width: 5.5%
+                    text-transform: uppercase
+                    font-weight: 200
+
+                // small screen header
+                &:nth-child(8)
+                    width: 100%
+
+                    > ul
+                        padding-top: 8px
+                        height: 20px
+                        line-height: 20px
+                        @include flexbox-center
+
+                        > li
+                            list-style: none
+                            width: 14.285%
+                            font-weight: 200
+                            text-transform: uppercase
+                            font-size: 14px
+
+
+                            &:nth-child(1)
+                                display: none
+                                width: 100%
+
+                                &.show
+                                    display: inline
+
+                            &:nth-child(n+2):nth-child(-n+8)
+                                &.hide
+                                    display: none
+
+                // statistics
+                &:nth-child(n+9):nth-child(-n+15)
+                    height: 36px
+                    line-height: 36px
+                    width: 14.285%
+                    font-weight: 400
+                    margin-top: -16px
+
+                    &.hide
+                        display: none
+
+                // schedule
+                &:nth-child(n+16):nth-child(-n+28)
+                    @extend :nth-child(n+9):nth-child(-n+15)
+                    font-size: 13px
+                    text-transform: uppercase
+                    display: none
+
+                    &.show
+                        display: inline
+
+                // - changed
+                ~ span
+                    margin-top: -16px
+                    width: 0.001%
+                    position: relative
+                    right: 2px
+                    display: none
+
+                    &.show
+                        display: inline
+
+            &:last-child
+                border-bottom: none
+
+    .pagination
+        list-style: none
+        margin: auto
+        width: 96%
+        max-width: 1440px
+        background-color: $white
+        @include flexbox-center
+        justify-content: space-between
+        margin-bottom: 24px
+
+        line-height: 28px
+        border-radius: 3px
+        box-shadow: 0 1px 0 0 rgba(0,0,0,.1)
+
+        > li
+            text-align: center
+            width: 100%
+            border: 1px solid $white
+            @include transition(all .1s ease-in-out)
+
+            &:first-child
+                border-left: none
+
+            &:last-child
+                border-right: none
+
+            > a
+                font-weight: 400
+                display: block
+                width: 100%
+
+            &:hover
+                background-color: $grey
+
+                > a
+                    color: $white
+
+            &.disabled
+
+                > span
+                    color: $light-grey
+
+                &:hover
+                    background-color: $white
+
+
+            &.active
+                background-color: $grey
+
+                > span
+                    color: $white
+
+@media only screen and (min-width: 320px)
+    .container-player > div
+
+        // franchise information
+        &:nth-child(2)
+            > span
+                font-size: 22px
+
+@media only screen and (min-width: 414px)
+    .container-player > div
+
+        // franchise information
+        &:nth-child(2)
+            > span
+                font-size: 24px
+
+@media only screen and (min-width: 507px)
+    .container-player
+        > div
+            // franchise information
+            &:nth-child(2)
+                width: 89%
+
+        .button
+            width: 89%
+
+        .table
+            width: 89%
+
+@media only screen and (min-width: 768px)
+    .container-player
+        .table
+            .tr
+                > div
+                    // player name
+                    &:nth-child(2)
+                        span
+                            font-size: 18px
+
+                    // statistics
+                    &:nth-child(n+9):nth-child(-n+15)
+                        font-size: 18px
+
+@media only screen and (min-width: 981px)
+    .container-player
+        > div
+            // franchise information
+            &:nth-child(2)
+                width: 96%
+                max-width: 1440px
+
+                > span
+                    letter-spacing: 1px
+                    font-size: 24px
+
+        .button
+            width: 96%
+
+        .table
+            width: 96%
+            max-width: 1440px
+
+            > div
+                padding-top: 0px
+
+                &:nth-child(2)
+                    padding-top: 2px
+
+                &:last-child
+                    padding-bottom: 2px
+
+            // header
+            .th
+                width: 100%
+                display: inline
+
+            // rows
+            .tr
+                border-bottom: none
+                flex-wrap: nowrap
+
+                &:hover
+                    background-color: $off-white
+
+                > div
+                    // positon
+                    &:nth-child(1)
+                        width: 7%
+
+                    // player name
+                    &:nth-child(2)
+                        width: 27%
+                        text-align: left
+
+                        span
+                            font-size: 16px
+
+                    // info
+                    &:nth-child(n+3):nth-child(-n+7)
+                        display: inline
+
+                    &:nth-child(3)
+                        width: 5.5%
+
+                    // small screen header
+                    &:nth-child(8)
+                        display: none
+
+                    // statistics
+                    &:nth-child(n+9):nth-child(-n+15)
+                        width: 5.5%
+                        font-weight: 400
+                        font-size: 16px
+                        margin-top: 0px
+
+                    ~ span
+                        margin-top: 0px
+
+@media only screen and (min-width: 1440px)
+    .container-player
+        .table
+            .tr
+                > div
+                    // statistics
+                    &:nth-child(n+9):nth-child(-n+15)
+                        font-size: 18px
