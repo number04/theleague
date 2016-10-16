@@ -11,7 +11,12 @@
                @foreach($recent_skater as $skater)
                <div class="tr">
                    <div><i class="fa fa-{{ $skater->add_drop }}-circle franchise-{{ $skater->franchise_id }}"></i></div>
-                   <div>{{ $skater->player_name }}</div>
+                   <div>
+                        <span>{{ $skater->player_name }}</span>
+                        <span>{{ $skater->player_pos}}</span>
+                        <span>{{ $skater->transaction_type }}</span>
+                        <span class="icon-{{ $skater->injury_status }}"></span>
+                    </div>
                    <div><i class="icon-{{ $skater->franchise_id }} franchise-{{ $skater->franchise_id }}"></i></div>
                    <div>{{ date("j M"), strtotime($skater->added_on) }}</div>
                </div>
@@ -28,7 +33,12 @@
                        @foreach($recent_goalie as $goalie)
                        <div class="tr">
                            <div><i class="fa fa-{{ $goalie->add_drop }}-circle franchise-{{ $goalie->franchise_id }}"></i></div>
-                           <div>{{ $goalie->player_name }}</div>
+                           <div>
+                                <span>{{ $goalie->player_name }}</span>
+                                <span>{{ $goalie->player_pos }}</span>
+                                <span>{{ $goalie->transaction_type }}</span>
+                                <span class="icon-{{ $goalie->injury_status }}"></span>
+                            </div>
                            <div><i class="icon-{{ $goalie->franchise_id }} franchise-{{ $goalie->franchise_id }}"></i></div>
                            <div>{{ date("j M"), strtotime($goalie->added_on) }}</div>
                        </div>
