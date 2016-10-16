@@ -130,16 +130,13 @@ class RosterController extends Controller
             'contract' =>  '1',
         ]);
 
-        Franchise::where('user_id', '=', $user_id)->update([
-            'sign_year'    =>  +1,
-            'sign_all' =>  +1,
-        ]);
+        Franchise::where('user_id', '=', $user_id)->increment('sign_year');
+        Franchise::where('user_id', '=', $user_id)->increment('sign_all');
 
         $transaction = new Transaction;
         $transaction->franchise_id = $user_id;
         $transaction->player_name = $request->player;
-        $transaction->add_drop = 'a';
-        $transaction->transaction_type = 'free agent';
+        $transaction->add_drop = 'plus';
         $transaction->save();
 
         Session::flash('success', $request->player.' added to roster.');
@@ -171,16 +168,13 @@ class RosterController extends Controller
             'contract' =>  '0',
         ]);
 
-        Franchise::where('user_id', '=', $user_id)->update([
-            'release_year'    =>  +1,
-            'release_all' =>  +1,
-        ]);
+        Franchise::where('user_id', '=', $user_id)->increment('release_year');
+        Franchise::where('user_id', '=', $user_id)->increment('release_all');
 
         $transaction = new Transaction;
         $transaction->franchise_id = $user_id;
         $transaction->player_name = $request->player;
-        $transaction->add_drop = 'd';
-        $transaction->transaction_type = 'to waivers';
+        $transaction->add_drop = 'minus';
         $transaction->save();
 
         $waiver = new Waiver;

@@ -72,4 +72,9 @@ class FranchiseRepository
             ->orderBy('teams.lineup_status', 'desc')
             ->get();
     }
+
+    public function info()
+    {
+        return Franchise::orderBy('waiver_order', 'asc')->get();
+    }
 }
