@@ -14,7 +14,7 @@
 
         <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-user-times"></i></a>
 
-        <a href="{{ url('/scoreboard-w01') }}"><i class="icon-scoreboard"></i></a>
+        <a href="{{ url('/scoreboard-w02') }}"><i class="icon-scoreboard"></i></a>
 
         <a href="{{ route('franchise-user') }}"><i class="icon-{{ Auth::user()->id }}"></i></a>
     </div>
