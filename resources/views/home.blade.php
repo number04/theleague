@@ -52,7 +52,7 @@
                    <div class="th">
                        <ul>
                            <li>season information</li>
-                           <li>pseason info</li>
+                           <li>season info</li>
                            <li>huddy</li>
                            <li>gretzky</li>
                            <li>traded</li>

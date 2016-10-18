@@ -4,10 +4,6 @@
 <div class="container">
     <?php
 
-    $week_number = '01';
-    $start_date = '2016-10-12';
-    $end_date = '2016-10-17';
-
     // teams
 
     function teamQuery()
