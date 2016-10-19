@@ -18,7 +18,7 @@
                         <span class="icon-{{ $skater->injury_status }}"></span>
                     </div>
                    <div><i class="icon-{{ $skater->franchise_id }} franchise-{{ $skater->franchise_id }}"></i></div>
-                   <div>{{ date("j M"), strtotime($skater->added_on) }}</div>
+                   <div>{{ date("j M", strtotime($skater->added_on)) }}</div>
                </div>
                @endforeach
            </div>
@@ -40,7 +40,7 @@
                                 <span class="icon-{{ $goalie->injury_status }}"></span>
                             </div>
                            <div><i class="icon-{{ $goalie->franchise_id }} franchise-{{ $goalie->franchise_id }}"></i></div>
-                           <div>{{ date("j M"), strtotime($goalie->added_on) }}</div>
+                           <div>{{ date("j M", strtotime($goalie->added_on)) }}</div>
                        </div>
                        @endforeach
                    </div>
