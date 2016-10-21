@@ -88,10 +88,7 @@ class StatRepository
 
     public function sumSkater($user_id, $week_number)
     {
-        return Skater::where('franchise_id', '=', $user_id)
-            ->select(DB::raw("
-                franchise_name,
-                franchise_tag,
+        return Skater::select(DB::raw("
                 sum(skaters_stats.gp_$week_number) as games_played,
                 sum(skaters_stats.g_$week_number) as goals,
                 sum(skaters_stats.a_$week_number) as assists,
@@ -99,34 +96,28 @@ class StatRepository
                 sum(skaters_stats.h_$week_number) as hits,
                 sum(skaters_stats.s_$week_number) as shots,
                 sum(skaters_stats.f_$week_number) as faceoff_wins"))
-            ->join('franchises', 'franchises.id', '=', 'skaters.franchise_id')
             ->join('skaters_stats', 'skaters_stats.player_id', '=', 'skaters.id')
             ->join('skaters_lineups', 'skaters_lineups.player_id', '=', 'skaters.id')
-            ->where('skaters_lineups.w_'.$week_number.'', '=', 'd'.$user_id.'')
+            ->where('skaters_lineups.w_'.$week_number, '=', 'd'.$user_id)
             ->get();
     }
 
     public function sumGoalie($user_id, $week_number)
     {
-        return Goalie::where('franchise_id', '=', $user_id)
-            ->select(DB::raw("
-                franchise_name,
-                franchise_tag,
+        return Goalie::select(DB::raw("
                 sum(goalies_stats.gp_$week_number) as games_played,
                 sum(goalies_stats.s_$week_number) as saves,
                 sum(goalies_stats.s_$week_number) / (sum(goalies_stats.s_$week_number) + sum(goalies_stats.g_$week_number)) as save_percentage,
                 sum(goalies_stats.g_$week_number) / (sum(goalies_stats.i_$week_number) / 60) * 60 as goals_against_average"))
-            ->join('franchises', 'franchises.id', '=', 'goalies.franchise_id')
             ->join('goalies_stats', 'goalies_stats.player_id', '=', 'goalies.id')
             ->join('goalies_lineups', 'goalies_lineups.player_id', '=', 'goalies.id')
-            ->where('goalies_lineups.w_'.$week_number.'', '=', 'd'.$user_id.'')
+            ->where('goalies_lineups.w_'.$week_number, '=', 'd'.$user_id)
             ->get();
     }
 
     public function sumTeam($user_id, $week_number)
     {
-        return Team::where('franchise_id', '=', $user_id)
-            ->select(DB::raw("
+        return Team::select(DB::raw("
                 franchise_name,
                 franchise_tag,
                 sum(teams_stats.gp_$week_number) as games_played,
@@ -134,7 +125,7 @@ class StatRepository
             ->join('franchises', 'franchises.id', '=', 'teams.franchise_id')
             ->join('teams_stats', 'teams_stats.player_id', '=', 'teams.id')
             ->join('teams_lineups', 'teams_lineups.player_id', '=', 'teams.id')
-            ->where('teams_lineups.w_'.$week_number.'', '=', 'd'.$user_id.'')
+            ->where('teams_lineups.w_'.$week_number, '=', 'd'.$user_id)
             ->get();
     }
 
