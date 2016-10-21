@@ -15,8 +15,7 @@ class StatRepository
 {
     public function skater($status, $user_id, $week_number, $schedule_query, $day_01, $day_02, $day_03, $day_04, $day_05, $day_06, $day_07)
     {
-        return Skater::where('franchise_id', '=', $user_id)
-            ->select(DB::raw("
+        return Skater::select(DB::raw("
                 skaters.player_name,
                 skaters.player_pos,
                 skaters.nhl,
@@ -44,8 +43,7 @@ class StatRepository
 
     public function goalie($status, $user_id, $week_number, $schedule_query, $day_01, $day_02, $day_03, $day_04, $day_05, $day_06, $day_07)
     {
-        return Goalie::where('franchise_id', '=', $user_id)
-            ->select(DB::raw("
+        return Goalie::select(DB::raw("
                 goalies.player_name,
                 goalies.player_pos,
                 goalies.nhl,
@@ -55,7 +53,7 @@ class StatRepository
                 goalies_stats.l_$week_number as losses,
                 goalies_stats.o_$week_number as overtime_losses,
                 goalies_stats.g_$week_number / (goalies_stats.i_$week_number / 60) * 60 as goals_against_average,
-                goalies_stats.s_$week_number / (goalies_stats.s_$week_number + goalies_stats.g_$week_number) as save_percentage,            
+                goalies_stats.s_$week_number / (goalies_stats.s_$week_number + goalies_stats.g_$week_number) as save_percentage,
                 goalies_stats.s_$week_number as saves,
                 $schedule_query"))
             ->join('goalies_stats', 'goalies_stats.player_id', '=', 'goalies.id')
@@ -68,8 +66,7 @@ class StatRepository
 
     public function team($status, $user_id, $week_number, $schedule_query, $day_01, $day_02, $day_03, $day_04, $day_05, $day_06, $day_07)
     {
-        return Team::where('franchise_id', '=', $user_id)
-            ->select(DB::raw("
+        return Team::select(DB::raw("
                 teams.player_name,
                 teams.player_pos,
                 teams.nhl,
