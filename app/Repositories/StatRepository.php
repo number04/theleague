@@ -174,7 +174,7 @@ class StatRepository
             ->groupBy('goalies_lineups.w_'.$week_number)
             ->whereIn('goalies_lineups.w_'.$week_number.'', ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8'])
             ->orderBy('goals_against_average', 'ASC')
-            ->get();
+            ->first()->goals_against_average;
     }
 
     public function topTeam($week_number)

@@ -50,8 +50,6 @@ class ScoreboardController extends Controller
                 (schedules.$day_07 <> '')
             ) AS game_count";
 
-            dd($this->stat->topGAA($week_number));
-
         return view('scoreboard', [
 
             'sum_d1_skater' => $this->stat->sumSkater(1, $week_number),
