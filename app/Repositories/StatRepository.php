@@ -168,13 +168,13 @@ class StatRepository
     public function topGAA($week_number)
     {
         return Goalie::select(DB::raw("
-                sum(goalies_stats.g_$week_number) / (sum(goalies_stats.i_$week_number) / 60) as goals_against_average"))
+                (sum(goalies_stats.g_$week_number) / (sum(goalies_stats.i_$week_number) / 60) * 60) as goals_against_average"))
             ->join('goalies_stats', 'goalies_stats.player_id', '=', 'goalies.id')
             ->join('goalies_lineups', 'goalies_lineups.player_id', '=', 'goalies.id')
             ->groupBy('goalies_lineups.w_'.$week_number)
             ->whereIn('goalies_lineups.w_'.$week_number.'', ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8'])
             ->orderBy('goals_against_average', 'ASC')
-            ->first()->goals_against_average;
+            ->get();
     }
 
     public function topTeam($week_number)
