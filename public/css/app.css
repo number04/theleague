@@ -2523,14 +2523,6 @@ div.checkbox label span {
     width: 10%;
     display: inline; } }
 
-@-webkit-keyframes grow-width {
-  from {
-    width: 0; } }
-
-@keyframes grow-width {
-  from {
-    width: 0; } }
-
 .container-standing {
   max-width: 1428px;
   margin: auto;
@@ -2546,6 +2538,14 @@ div.checkbox label span {
   flex-wrap: wrap;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap; }
+
+@-webkit-keyframes grow-width {
+  from {
+    width: 0; } }
+
+@keyframes grow-width {
+  from {
+    width: 0; } }
   .container-standing > div {
     margin: 4px;
     width: 320px;

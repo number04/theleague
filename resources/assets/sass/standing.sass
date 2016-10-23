@@ -1,17 +1,17 @@
-@-webkit-keyframes grow-width
-    from
-        width: 0
-
-@keyframes grow-width
-    from
-        width: 0
-
 .container-standing
     max-width: 1428px
     margin: auto
     margin-top: 36px
     margin-bottom: 36px
     @include flexbox-center-wrap
+
+    @-webkit-keyframes grow-width
+        from
+            width: 0
+
+    @keyframes grow-width
+        from
+            width: 0
 
     // outer card
     > div
@@ -145,7 +145,7 @@
                                 > li
                                     > span
                                         font-weight: 600
-                                        
+
                             > li
                                 position: relative
                                 height: 50px
