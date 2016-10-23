@@ -2542,14 +2542,12 @@ div.checkbox label span {
 @-webkit-keyframes grow-width {
   0% {
     width: 0%; }
-  100% {
-    width: 100%; } }
+  100% { } }
 
 @keyframes grow-width {
   0% {
     width: 0%; }
-  100% {
-    width: 100%; } }
+  100% { } }
   .container-standing > div {
     margin: 4px;
     width: 320px;
