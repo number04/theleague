@@ -2540,12 +2540,16 @@ div.checkbox label span {
   -webkit-flex-wrap: wrap; }
 
 @-webkit-keyframes grow-width {
-  from {
-    width: 0; } }
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
 
 @keyframes grow-width {
-  from {
-    width: 0; } }
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
   .container-standing > div {
     margin: 4px;
     width: 320px;
