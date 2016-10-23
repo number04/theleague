@@ -22,7 +22,7 @@
 	<div class="navigation-pane">
 		<div>
 		    <p><a href="{{ route('skater', ['type' => 'free-agent', 'position' => 'S']) }}">Players</a></p>
-			<p><a href="#">Rosters</a></p>
+			<p><a href="{{ route('roster') }}">Rosters</a></p>
             <p><a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Log Out</a></p>
 			<!--<p><a href="#">Draft</a></p>-->
 			<!--<p><a href="#">Playoffs</a></p>-->
