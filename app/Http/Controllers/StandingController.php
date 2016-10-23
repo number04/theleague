@@ -26,7 +26,7 @@ class StandingController extends Controller
     {
         return view('standing', [
 
-            'week_current' => $this->variable->weekCurrent(),
+            'week_last' => $this->variable->weekLast(),
             'total_top' => $this->standing->topTotal(),
             'skater_top' => $this->standing->topSkater(),
             'goalie_top' => $this->standing->topGoalie(),

@@ -29,9 +29,9 @@ class VariableRepository
             ->first()->variable;
     }
 
-    public function weekCurrent()
+    public function weekLast()
     {
-        return Variable::where('variable_name', '=', 'week_current')
+        return Variable::where('variable_name', '=', 'week_last')
             ->first()->variable;
     }
 

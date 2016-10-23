@@ -56,7 +56,7 @@
 
         <span>
             <p>average</p>
-            <p>{{ number_format(${$average} / $week_current, 1) }}</p>
+            <p>{{ number_format(${$average} / $week_last, 1) }}</p>
         </span>
     </div>
 
