@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container-roster">
-    <form action="{{ url('franchise/roster/sign') }}" method="post">
+<div class="container-manage">
+    <form action="{{ url('franchise/manage/sign') }}" method="post">
         {{ csrf_field() }}
 
         <span>sign player
@@ -28,7 +28,7 @@
         <input type="submit" name="post" value="Submit" class="button">
     </form>
 
-    <form action="{{ url('franchise/roster/release') }}" method="post">
+    <form action="{{ url('franchise/manage/release') }}" method="post">
         {{ csrf_field() }}
 
         <span>release player
@@ -54,7 +54,7 @@
         <input type="submit" name="post" value="Submit" class="button">
     </form>
 
-    <form action="{{ url('franchise/roster/show') }}" method="post">
+    <form action="{{ url('franchise/manage/show') }}" method="post">
         {{ csrf_field() }}
 
         <span>call up
@@ -80,7 +80,7 @@
         <input type="submit" name="post" value="Submit" class="button">
     </form>
 
-    <form action="{{ url('franchise/roster/farm') }}" method="post">
+    <form action="{{ url('franchise/manage/farm') }}" method="post">
         {{ csrf_field() }}
 
         <span>send down
@@ -106,7 +106,7 @@
         <input type="submit" name="post" value="Submit" class="button">
     </form>
 
-    <form action="{{ url('franchise/roster/injured') }}" method="post">
+    <form action="{{ url('franchise/manage/injured') }}" method="post">
         {{ csrf_field() }}
 
         <span>injured reserve
@@ -132,7 +132,7 @@
         <input type="submit" name="post" value="Submit" class="button">
     </form>
 
-    <form action="{{ url('franchise/roster/activate') }}" method="post">
+    <form action="{{ url('franchise/manage/activate') }}" method="post">
         {{ csrf_field() }}
 
         <span>activate player

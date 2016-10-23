@@ -24,6 +24,7 @@ class StandingController extends Controller
 
     public function standing(Request $request)
     {
+        //dd($this->standing->statWeekly(1, 'w_01'));
         return view('standing', [
 
             'week_last' => $this->variable->weekLast(),
@@ -64,6 +65,7 @@ class StandingController extends Controller
             'w20_1' => $this->standing->weekly(1, 'w_20'),
             'w21_1' => $this->standing->weekly(1, 'w_21'),
             'w22_1' => $this->standing->weekly(1, 'w_22'),
+            //'s01_1' => $this->standing->statWeekly(1, 'w_01'),
 
             'franchise_2' => $this->franchise->id(2),
             'rank_2' => $this->standing->rank(2),
@@ -97,6 +99,7 @@ class StandingController extends Controller
             'w20_2' => $this->standing->weekly(2, 'w_20'),
             'w21_2' => $this->standing->weekly(2, 'w_21'),
             'w22_2' => $this->standing->weekly(2, 'w_22'),
+            //'s01_2' => $this->standing->statWeekly(2, 'w_01'),
 
             'franchise_3' => $this->franchise->id(3),
             'rank_3' => $this->standing->rank(3),
@@ -130,6 +133,7 @@ class StandingController extends Controller
             'w20_3' => $this->standing->weekly(3, 'w_20'),
             'w21_3' => $this->standing->weekly(3, 'w_21'),
             'w22_3' => $this->standing->weekly(3, 'w_22'),
+            //'s01_3' => $this->standing->statWeekly(3, 'w_01'),
 
             'franchise_4' => $this->franchise->id(4),
             'rank_4' => $this->standing->rank(4),
@@ -163,6 +167,7 @@ class StandingController extends Controller
             'w20_4' => $this->standing->weekly(4, 'w_20'),
             'w21_4' => $this->standing->weekly(4, 'w_21'),
             'w22_4' => $this->standing->weekly(4, 'w_22'),
+            //'s01_4' => $this->standing->statWeekly(4, 'w_01'),
 
             'franchise_5' => $this->franchise->id(5),
             'rank_5' => $this->standing->rank(5),
@@ -196,6 +201,7 @@ class StandingController extends Controller
             'w20_5' => $this->standing->weekly(5, 'w_20'),
             'w21_5' => $this->standing->weekly(5, 'w_21'),
             'w22_5' => $this->standing->weekly(5, 'w_22'),
+            //'s01_5' => $this->standing->statWeekly(5, 'w_01'),
 
             'franchise_6' => $this->franchise->id(6),
             'rank_6' => $this->standing->rank(6),
@@ -229,6 +235,7 @@ class StandingController extends Controller
             'w20_6' => $this->standing->weekly(6, 'w_20'),
             'w21_6' => $this->standing->weekly(6, 'w_21'),
             'w22_6' => $this->standing->weekly(6, 'w_22'),
+            //'s01_6' => $this->standing->statWeekly(6, 'w_01'),
 
             'franchise_7' => $this->franchise->id(7),
             'rank_7' => $this->standing->rank(7),
@@ -262,6 +269,7 @@ class StandingController extends Controller
             'w20_7' => $this->standing->weekly(7, 'w_20'),
             'w21_7' => $this->standing->weekly(7, 'w_21'),
             'w22_7' => $this->standing->weekly(7, 'w_22'),
+            //'s01_7' => $this->standing->statWeekly(7, 'w_01'),
 
             'franchise_8' => $this->franchise->id(8),
             'rank_8' => $this->standing->rank(8),
@@ -295,6 +303,7 @@ class StandingController extends Controller
             'w20_8' => $this->standing->weekly(8, 'w_20'),
             'w21_8' => $this->standing->weekly(8, 'w_21'),
             'w22_8' => $this->standing->weekly(8, 'w_22'),
+            //'s01_8' => $this->standing->statWeekly(8, 'w_01'),
         ]);
     }
 }

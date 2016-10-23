@@ -64,6 +64,25 @@
         <div>
             <div style="height:{{ ${$w01} / 76 * 100 }}%">
                 <span>week 01: <span>{{ ${$w01} }}</span></span>
+                {{-- <span>
+                    <ul>
+                        <li>g</li>
+                        <li>a</li>
+                        <li>pts</li>
+                        <li>ht</li>
+                        <li>s</li>
+                        <li>fow</li>
+                        <li>sv</li>
+                        <li>svp</li>
+                        <li>gaa</li>
+                        <li>t</li>
+                    </ul>
+                </span>
+                <span>
+                    @foreach(${ $s01 } as $stat)
+                        <span>{{ $stat->w_01 }}</span>
+                    @endforeach
+                </span> --}}
             </div>
         </div>
 

@@ -16,7 +16,7 @@
 
             <div class="button">
                 <input type="submit" class="submit franchise-{{ $franchise_id }}" value="submit lineup">
-                <a href="{{ route('franchise-roster') }}" class="franchise-{{ $franchise_id }}">manage roster</a>
+                <a href="{{ route('franchise-manage') }}" class="franchise-{{ $franchise_id }}">manage roster</a>
                 <a href="#" class="franchise-{{ $franchise_id }}">propose trade</a>
                 <a href="#" class="franchise-{{ $franchise_id }}">player schedule</a>
                 <a href="#" class="franchise-{{ $franchise_id }} active">player stats</a>

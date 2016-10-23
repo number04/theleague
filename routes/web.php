@@ -29,16 +29,16 @@ Route::group(['middleware' => ['auth']], function () {
 
             Route::post('/', 'FranchiseController@franchisePost');
 
-            Route::group(['prefix' => 'roster'], function()
+            Route::group(['prefix' => 'manage'], function()
                 {
-                    Route::get('/', 'RosterController@roster')->name('franchise-roster');
+                    Route::get('/', 'ManageController@roster')->name('franchise-manage');
 
-                    Route::post('/sign', 'RosterController@sign');
-                    Route::post('/release', 'RosterController@release');
-                    Route::post('/show', 'RosterController@show');
-                    Route::post('/farm', 'RosterController@farm');
-                    Route::post('/injured', 'RosterController@injured');
-                    Route::post('/activate', 'RosterController@activate');
+                    Route::post('/sign', 'ManageController@sign');
+                    Route::post('/release', 'ManageController@release');
+                    Route::post('/show', 'ManageController@show');
+                    Route::post('/farm', 'ManageController@farm');
+                    Route::post('/injured', 'ManageController@injured');
+                    Route::post('/activate', 'ManageController@activate');
                 });
         });
 
@@ -47,6 +47,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/scoreboard-w{week_number}', 'ScoreboardController@scoreboard')->name('scoreboard');
 
     Route::get('/standings', 'StandingController@standing')->name('standing');
+
+    Route::get('/rosters', 'RosterController@roster')->name('roster');
 
     Route::get('/skater/{type}/{position}', 'PlayerController@skater')->name('skater');
     Route::get('/goalie/{type}/{position}', 'PlayerController@goalie')->name('goalie');

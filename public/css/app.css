@@ -1027,7 +1027,7 @@ div.checkbox label span {
   .container-franchise > div:nth-child(3) .table .tr > div:nth-child(n+8):nth-child(-n+14), .container-franchise > div:nth-child(3) .table .tr > div:nth-child(n+15):nth-child(-n+27) {
     font-size: 18px; } }
 
-.container-roster {
+.container-manage {
   margin: auto;
   width: 100%;
   max-width: 1200px;
@@ -1041,18 +1041,18 @@ div.checkbox label span {
   flex-wrap: wrap;
   display: -webkit-flex;
   -webkit-flex-wrap: wrap; }
-  .container-roster .hidden_select_container {
+  .container-manage .hidden_select_container {
     width: 0;
     height: 0;
     overflow: hidden; }
-  .container-roster .simpleselect {
+  .container-manage .simpleselect {
     float: right;
     width: 48px;
     height: 48px;
     font-size: 18px;
     margin-right: 16px;
     margin-top: -106px; }
-  .container-roster .simpleselect .placeholder {
+  .container-manage .simpleselect .placeholder {
     width: 100%;
     height: 100%;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -1068,7 +1068,7 @@ div.checkbox label span {
     justify-content: center;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease; }
-  .container-roster .simpleselect .placeholder:after {
+  .container-manage .simpleselect .placeholder:after {
     content: "+";
     position: relative;
     left: 1px;
@@ -1076,7 +1076,7 @@ div.checkbox label span {
     font-size: 52px;
     border-radius: 50%;
     color: white; }
-  .container-roster .simpleselect .options {
+  .container-manage .simpleselect .options {
     display: none;
     position: absolute;
     top: 8px;
@@ -1088,18 +1088,18 @@ div.checkbox label span {
     background-color: #ccd0d2;
     border-top: 8px solid #ccd0d2;
     border-radius: 2px; }
-  .container-roster .simpleselect .options .option {
+  .container-manage .simpleselect .options .option {
     color: #636b6f;
     padding: 8px 0px 8px 16px;
     font-size: 18px;
     position: relative;
     top: 32px;
     cursor: pointer; }
-  .container-roster .simpleselect .options .option:first-child {
+  .container-manage .simpleselect .options .option:first-child {
     display: none !important; }
-  .container-roster .simpleselect .options .option.active {
+  .container-manage .simpleselect .options .option.active {
     color: white; }
-  .container-roster > form {
+  .container-manage > form {
     position: relative;
     background-color: white;
     width: 320px;
@@ -1118,31 +1118,31 @@ div.checkbox label span {
     display: -webkit-flex;
     -webkit-flex-wrap: wrap;
     align-content: space-between; }
-    .container-roster > form:first-of-type {
+    .container-manage > form:first-of-type {
       margin-top: 48px; }
-    .container-roster > form:last-of-type {
+    .container-manage > form:last-of-type {
       margin-bottom: 48px; }
-    .container-roster > form > span {
+    .container-manage > form > span {
       background-color: white;
       padding: 16px;
       width: 100%;
       font-size: 26px;
       text-transform: capitalize;
       font-weight: 600; }
-      .container-roster > form > span > span {
+      .container-manage > form > span > span {
         font-weight: 200;
         color: #636b6f;
         display: block;
         font-size: 18px;
         padding-top: 4px; }
-    .container-roster > form > div {
+    .container-manage > form > div {
       width: 100%; }
-      .container-roster > form > div > option span {
+      .container-manage > form > div > option span {
         color: #744141;
         position: relative;
         top: 2px;
         margin-left: 6px; }
-  .container-roster .display-name {
+  .container-manage .display-name {
     position: absolute;
     left: 0;
     top: 130px;
@@ -1152,7 +1152,7 @@ div.checkbox label span {
     text-transform: capitalize;
     pointer-events: none;
     cursor: default; }
-  .container-roster .search {
+  .container-manage .search {
     position: absolute;
     width: calc(100% - 32px);
     margin-left: 16px;
@@ -1167,11 +1167,11 @@ div.checkbox label span {
     padding-left: 16px;
     -webkit-transition: all 1s ease;
     transition: all 1s ease; }
-  .container-roster .search.active {
+  .container-manage .search.active {
     visibility: visible;
     opacity: 1;
     z-index: 10000; }
-  .container-roster .button {
+  .container-manage .button {
     width: calc(100% - 32px);
     height: 32px;
     background-color: white;
@@ -1184,16 +1184,16 @@ div.checkbox label span {
     transition: all 0.2s ease;
     border: 1px solid #636b6f;
     color: #636b6f; }
-  .container-roster .button:hover {
+  .container-manage .button:hover {
     color: white;
     background-color: #636b6f; }
 
 @media only screen and (min-width: 694px) {
-  .container-roster {
+  .container-manage {
     height: calc(100vh - 80px); }
-    .container-roster > form:first-of-type {
+    .container-manage > form:first-of-type {
       margin-top: 0px; }
-    .container-roster > form:last-of-type {
+    .container-manage > form:last-of-type {
       margin-bottom: 0px; } }
 
 .container-scoreboard > div {
@@ -2548,6 +2548,16 @@ div.checkbox label span {
   0% {
     width: 0%; }
   100% { } }
+
+@-webkit-keyframes grow-height {
+  0% {
+    height: 0%; }
+  100% { } }
+
+@keyframes grow-height {
+  0% {
+    height: 0%; }
+  100% { } }
   .container-standing > div {
     margin: 4px;
     width: 320px;
@@ -2769,7 +2779,7 @@ div.checkbox label span {
     .container-standing > div > div:nth-child(3) > div:last-child {
       position: relative;
       flex-wrap: nowrap !important;
-      border-bottom: 40px solid #636b6f; }
+      border-bottom: 30px solid #636b6f; }
       .container-standing > div > div:nth-child(3) > div:last-child > div {
         align-self: flex-end;
         width: 100%;
@@ -2789,23 +2799,139 @@ div.checkbox label span {
           border-top-left-radius: 3px;
           border-top-right-radius: 3px;
           align-self: flex-end;
-          -webkit-transition: all 0.2s;
-          transition: all 0.2s; }
+          -webkit-animation: grow-height 2s ease-out;
+          animation: grow-height 2s ease-out;
+          -webkit-transition: all 0.3 ease-in-out;
+          transition: all 0.3 ease-in-out; }
           .container-standing > div > div:nth-child(3) > div:last-child > div > div:hover {
             background: #edeff0; }
             .container-standing > div > div:nth-child(3) > div:last-child > div > div:hover > span {
               visibility: visible; }
           .container-standing > div > div:nth-child(3) > div:last-child > div > div > span {
             position: absolute;
-            bottom: -30px;
+            bottom: -25px;
             left: 50%;
             color: white;
             visibility: hidden;
             text-transform: capitalize;
             -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0); }
+            .container-standing > div > div:nth-child(3) > div:last-child > div > div > span:nth-child(2) {
+              width: 100%;
+              bottom: -50px; }
+              .container-standing > div > div:nth-child(3) > div:last-child > div > div > span:nth-child(2) > ul {
+                width: 100%;
+                list-style: none;
+                display: -webkit-box;
+                display: flex;
+                -webkit-box-align: center;
+                align-items: center;
+                align-content: center;
+                -webkit-box-pack: center;
+                justify-content: center; }
+                .container-standing > div > div:nth-child(3) > div:last-child > div > div > span:nth-child(2) > ul > li {
+                  width: 100%;
+                  text-align: center;
+                  text-transform: uppercase;
+                  font-weight: 200;
+                  font-size: 12px;
+                  color: white; }
+            .container-standing > div > div:nth-child(3) > div:last-child > div > div > span:nth-child(3) {
+              width: 100%;
+              bottom: -75px;
+              display: -webkit-box;
+              display: flex;
+              -webkit-box-align: center;
+              align-items: center;
+              align-content: center;
+              -webkit-box-pack: center;
+              justify-content: center; }
+              .container-standing > div > div:nth-child(3) > div:last-child > div > div > span:nth-child(3) > span {
+                width: 12.5%;
+                text-align: center;
+                font-size: 16px;
+                color: white; }
             .container-standing > div > div:nth-child(3) > div:last-child > div > div > span > span {
               font-size: 18px;
               color: white; }
+
+.container-roster {
+  max-width: 768px;
+  margin: auto;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap; }
+  .container-roster > div {
+    height: auto;
+    width: 220px;
+    margin: 4px;
+    text-align: center;
+    border-radius: 3px;
+    align-self: flex-start; }
+    .container-roster > div > span {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 24px;
+      margin: 4px 0px; }
+    .container-roster > div > div {
+      margin-top: 4px;
+      margin-bottom: 4px;
+      border-radius: 3px;
+      background-color: white;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      align-content: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      display: -webkit-flex;
+      -webkit-flex-wrap: wrap; }
+      .container-roster > div > div:nth-child(2), .container-scoreboard > div:nth-child(2) > div .container-roster > div.tr > div:nth-child(9), .container-scoreboard > div:nth-child(2) > div .container-roster > div.tr > div:nth-child(13) {
+        border: 4px solid #222d3e; }
+      .container-roster > div > div:nth-child(3) {
+        border: 4px solid #175a8d; }
+      .container-roster > div > div:nth-child(4) {
+        border: 4px solid #598544; }
+      .container-roster > div > div:nth-child(5) {
+        border: 4px solid #573534; }
+      .container-roster > div > div:nth-child(6) {
+        border: 4px solid #c92336; }
+      .container-roster > div > div:nth-child(7) {
+        border: 4px solid #887a7a; }
+      .container-roster > div > div:nth-child(8) {
+        border: 4px solid #a59079; }
+      .container-roster > div > div:nth-child(9) {
+        border: 4px solid #333c73; }
+      .container-roster > div > div > div {
+        width: 100%;
+        padding: 2px 8px;
+        text-align: left; }
+        .container-roster > div > div > div:first-child {
+          padding-top: 8px; }
+        .container-roster > div > div > div:last-child {
+          padding-bottom: 8px; }
+        .container-roster > div > div > div > span:nth-child(2) {
+          text-transform: uppercase;
+          font-weight: 600; }
+        .container-roster > div > div > div > span:nth-child(3) {
+          text-transform: uppercase; }
+        .container-roster > div > div > div > span:nth-child(4) {
+          position: relative;
+          top: 1px;
+          color: #aa6767; }
+
+@media only screen and (min-width: 1484px) {
+  .container-roster {
+    max-width: 1484px; } }
 
 /*# sourceMappingURL=app.css.map */

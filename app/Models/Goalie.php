@@ -35,7 +35,7 @@ class Goalie extends Model
         'lineup_status',
     ];
 
-    public function playerNameFirstLetter ()
+    public function getPlayerNameFirstLetterAttribute ()
     {
         return substr($this->player_name, 0, 1);
     }

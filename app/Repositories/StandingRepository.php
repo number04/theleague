@@ -173,6 +173,13 @@ class StandingRepository
             ->sum($week);
     }
 
+    public function statWeekly($franchise_id, $week)
+    {
+            return Standing::select($week)
+                ->where('franchise_id', '=', $franchise_id)
+                ->get();
+    }
+
     public function bestWeekly($franchise_id)
     {
         return Standing::where('franchise_id', '=', $franchise_id)
