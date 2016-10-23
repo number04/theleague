@@ -2719,6 +2719,8 @@ div.checkbox label span {
       list-style-type: none;
       padding: 0;
       width: 90%; }
+      .container-standing > div > div:nth-child(2) > div:last-child > ul.top > li > span, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul.top > li > span, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul.top > li > span {
+        font-weight: 600; }
       .container-standing > div > div:nth-child(2) > div:last-child > ul > li, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li {
         position: relative;
         height: 50px; }
@@ -2727,8 +2729,6 @@ div.checkbox label span {
           padding-bottom: 6px;
           text-align: right;
           border-bottom: 16px solid #edeff0; }
-          .container-standing > div > div:nth-child(2) > div:last-child > ul > li > span.top, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li > span.top, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li > span.top {
-            font-weight: 600; }
         .container-standing > div > div:nth-child(2) > div:last-child > ul > li > h6, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li > h6, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li > h6 {
           display: block;
           padding-bottom: 6px;
