@@ -383,25 +383,25 @@
 
             e.preventDefault();
         });
+
+        function setWidth(dataElement, element, cssProperty, percent) {
+            var listData = [];
+
+            $(dataElement).each(function() {
+                listData.push($(this).html());
+            });
+
+            var listMax = Math.max.apply(Math, listData);
+
+            $(element).each(function(index) {
+                $(this).css(cssProperty, (listData[index] / listMax) * percent + "%");
+            });
+        }
+
+        setWidth(".total span", ".total h6", "width", 100);
+        setWidth(".skater span", ".skater h6", "width", 100);
+        setWidth(".goalie span", ".goalie h6", "width", 100);
+        setWidth(".team span", ".team h6", "width", 100);
     });
-
-    function setWidth(dataElement, element, cssProperty, percent) {
-        var listData = [];
-
-        $(dataElement).each(function() {
-            listData.push($(this).html());
-        });
-
-        var listMax = Math.max.apply(Math, listData);
-
-        $(element).each(function(index) {
-            $(this).css(cssProperty, (listData[index] / listMax) * percent + "%");
-        });
-    }
-
-    setWidth(".total span", ".total h6", "width", 100);
-    setWidth(".skater span", ".skater h6", "width", 100);
-    setWidth(".goalie span", ".goalie h6", "width", 100);
-    setWidth(".team span", ".team h6", "width", 100);
 </script>
 @endsection
