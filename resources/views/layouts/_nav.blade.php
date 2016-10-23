@@ -21,7 +21,7 @@
 
 	<div class="navigation-pane">
 		<div>
-			<p><a href="#">Standings</a></p>
+			<p><a href="#">{{ route('standing') }}</a></p>
 		    <p><a href="{{ route('skater', ['type' => 'free-agent', 'position' => 'S']) }}">Players</a></p>
 			<p><a href="#">Rosters</a></p>
 			<!--<p><a href="#">Draft</a></p>-->
