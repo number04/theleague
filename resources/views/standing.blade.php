@@ -230,7 +230,7 @@
 
     <div style="order: {{ $rank_6 }}">
         <div class="top">
-            <a href="#ta11" class="active"><i class="fa fa-bar-chart"></i></a>
+            <a href="#tab11" class="active"><i class="fa fa-bar-chart"></i></a>
             <span class="franchise-{{ $franchise_6 }}"><p><i class="icon-{{ $franchise_6 }}"></i></p></span>
             <a href="#tab12"><i class="fa fa-calendar"></i></a>
         </div>
