@@ -2523,4 +2523,287 @@ div.checkbox label span {
     width: 10%;
     display: inline; } }
 
+@-webkit-keyframes grow-width {
+  from {
+    width: 0; } }
+
+@keyframes grow-width {
+  from {
+    width: 0; } }
+
+.container-standing {
+  max-width: 1428px;
+  margin: auto;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  align-content: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap; }
+  .container-standing > div {
+    margin: 4px;
+    width: 320px;
+    height: 480px;
+    background-color: white;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: -webkit-flex;
+    -webkit-flex-wrap: wrap; }
+    .container-standing > div > div:first-child {
+      width: 100%;
+      height: 180px;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      align-content: center;
+      -webkit-box-pack: center;
+      justify-content: center; }
+      .container-standing > div > div:first-child > a {
+        background-color: #edeff0;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center; }
+        .container-standing > div > div:first-child > a > i {
+          font-size: 24px; }
+        .container-standing > div > div:first-child > a.active {
+          background-color: #636b6f; }
+          .container-standing > div > div:first-child > a.active > i {
+            color: white; }
+        .container-standing > div > div:first-child > a:hover {
+          background-color: #636b6f; }
+          .container-standing > div > div:first-child > a:hover > i {
+            color: white; }
+      .container-standing > div > div:first-child span {
+        width: 112px;
+        height: 112px;
+        margin-left: 32px;
+        margin-right: 32px;
+        border-radius: 50%;
+        box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center; }
+        .container-standing > div > div:first-child span.franchise-1 {
+          background-color: #222d3e; }
+        .container-standing > div > div:first-child span.franchise-2 {
+          background-color: #175a8d; }
+        .container-standing > div > div:first-child span.franchise-3 {
+          background-color: #598544; }
+        .container-standing > div > div:first-child span.franchise-4 {
+          background-color: #573534; }
+        .container-standing > div > div:first-child span.franchise-5 {
+          background-color: #c92336; }
+        .container-standing > div > div:first-child span.franchise-6 {
+          background-color: #887a7a; }
+        .container-standing > div > div:first-child span.franchise-7 {
+          background-color: #a59079; }
+        .container-standing > div > div:first-child span.franchise-8 {
+          background-color: #333c73; }
+        .container-standing > div > div:first-child span > p {
+          width: 94%;
+          height: 94%;
+          border-radius: 50%;
+          border: 2px solid white;
+          display: -webkit-box;
+          display: flex;
+          -webkit-box-align: center;
+          align-items: center;
+          align-content: center;
+          -webkit-box-pack: center;
+          justify-content: center; }
+          .container-standing > div > div:first-child span > p > i {
+            color: white;
+            font-size: 56px; }
+    .container-standing > div > div:nth-child(n+2):nth-child(-n+3) {
+      width: 100%;
+      height: calc(100% - 180px);
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      align-content: center;
+      -webkit-box-pack: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      display: -webkit-flex;
+      -webkit-flex-wrap: wrap;
+      display: none; }
+      .container-standing > div > div:nth-child(n+2):nth-child(-n+3).active {
+        display: inline; }
+      .container-standing > div > div:nth-child(n+2):nth-child(-n+3) > div:first-child {
+        height: 68px;
+        width: 100%;
+        line-height: 26px;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center; }
+        .container-standing > div > div:nth-child(n+2):nth-child(-n+3) > div:first-child > span {
+          text-align: center; }
+          .container-standing > div > div:nth-child(n+2):nth-child(-n+3) > div:first-child > span p {
+            color: white; }
+            .container-standing > div > div:nth-child(n+2):nth-child(-n+3) > div:first-child > span p:first-child {
+              text-transform: capitalize;
+              font-size: 14px;
+              padding-top: 6px;
+              font-weight: 200; }
+            .container-standing > div > div:nth-child(n+2):nth-child(-n+3) > div:first-child > span p:last-child {
+              font-weight: 600;
+              font-size: 22px; }
+      .container-standing > div > div:nth-child(n+2):nth-child(-n+3) > div:last-child {
+        width: 100%;
+        height: calc(100% - 68px);
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-1, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-1, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-1 {
+      background-color: #222d3e; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-2, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-2, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-2 {
+      background-color: #175a8d; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-3, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-3, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-3 {
+      background-color: #598544; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-4, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-4, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-4 {
+      background-color: #573534; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-5, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-5, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-5 {
+      background-color: #c92336; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-6, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-6, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-6 {
+      background-color: #887a7a; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-7, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-7, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-7 {
+      background-color: #a59079; }
+    .container-standing > div > div:nth-child(2) > div:first-child.franchise-8, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child.franchise-8, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child.franchise-8 {
+      background-color: #333c73; }
+    .container-standing > div > div:nth-child(2) > div:first-child span, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child span, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child span {
+      width: 100%;
+      height: 68px; }
+      .container-standing > div > div:nth-child(2) > div:first-child span:first-child, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child span:first-child, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child span:first-child {
+        border-right: 1px solid white; }
+      .container-standing > div > div:nth-child(2) > div:first-child span:last-child, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:first-child span:last-child, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:first-child span:last-child {
+        border-left: 1px solid white; }
+    .container-standing > div > div:nth-child(2) > div:last-child > ul, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul {
+      list-style-type: none;
+      padding: 0;
+      width: 90%; }
+      .container-standing > div > div:nth-child(2) > div:last-child > ul > li, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li {
+        position: relative;
+        height: 50px; }
+        .container-standing > div > div:nth-child(2) > div:last-child > ul > li > span, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li > span, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li > span {
+          display: block;
+          padding-bottom: 6px;
+          text-align: right;
+          border-bottom: 16px solid #edeff0; }
+          .container-standing > div > div:nth-child(2) > div:last-child > ul > li > span.top, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li > span.top, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li > span.top {
+            font-weight: 600; }
+        .container-standing > div > div:nth-child(2) > div:last-child > ul > li > h6, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(9) > div:last-child > ul > li > h6, .container-scoreboard > div:nth-child(2) > div .container-standing > div.tr > div:nth-child(13) > div:last-child > ul > li > h6 {
+          display: block;
+          padding-bottom: 6px;
+          border-bottom: 16px solid #edeff0;
+          position: absolute;
+          overflow: visible;
+          border-bottom-color: #636b6f;
+          -webkit-animation: grow-width 3s ease;
+          animation: grow-width 3s ease; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-1 {
+      background-color: #222d3e; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-2 {
+      background-color: #175a8d; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-3 {
+      background-color: #598544; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-4 {
+      background-color: #573534; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-5 {
+      background-color: #c92336; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-6 {
+      background-color: #887a7a; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-7 {
+      background-color: #a59079; }
+    .container-standing > div > div:nth-child(3) > div:first-child.franchise-8 {
+      background-color: #333c73; }
+    .container-standing > div > div:nth-child(3) > div:first-child span {
+      width: 100%;
+      height: 68px; }
+      .container-standing > div > div:nth-child(3) > div:first-child span:first-child {
+        border-right: 1px solid white; }
+      .container-standing > div > div:nth-child(3) > div:first-child span:nth-child(2) {
+        border-right: 1px solid white;
+        border-left: 1px solid white; }
+      .container-standing > div > div:nth-child(3) > div:first-child span:last-child {
+        border-left: 1px solid white; }
+    .container-standing > div > div:nth-child(3) > div:last-child {
+      position: relative;
+      flex-wrap: nowrap !important;
+      border-bottom: 40px solid #636b6f; }
+      .container-standing > div > div:nth-child(3) > div:last-child > div {
+        align-self: flex-end;
+        width: 100%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+        height: 98%;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center; }
+        .container-standing > div > div:nth-child(3) > div:last-child > div > div {
+          width: 100%;
+          background: #636b6f;
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          align-self: flex-end;
+          -webkit-transition: all 0.2s;
+          transition: all 0.2s; }
+          .container-standing > div > div:nth-child(3) > div:last-child > div > div:hover {
+            background: #edeff0; }
+            .container-standing > div > div:nth-child(3) > div:last-child > div > div:hover > span {
+              visibility: visible; }
+          .container-standing > div > div:nth-child(3) > div:last-child > div > div > span {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            color: white;
+            visibility: hidden;
+            text-transform: capitalize;
+            -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0); }
+            .container-standing > div > div:nth-child(3) > div:last-child > div > div > span > span {
+              font-size: 18px;
+              color: white; }
+
 /*# sourceMappingURL=app.css.map */

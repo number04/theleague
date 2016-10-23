@@ -362,7 +362,7 @@
         </div>
 
         <div id="tab1" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd1_skater',
                 'd_goalie' => 'd1_goalie',
                 'd_team' => 'd1_team',
@@ -380,7 +380,7 @@
         </div>
 
         <div id="tab2" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd2_skater',
                 'd_goalie' => 'd2_goalie',
                 'd_team' => 'd2_team',
@@ -398,7 +398,7 @@
         </div>
 
         <div id="tab3" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd3_skater',
                 'd_goalie' => 'd3_goalie',
                 'd_team' => 'd3_team',
@@ -416,7 +416,7 @@
         </div>
 
         <div id="tab4" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd4_skater',
                 'd_goalie' => 'd4_goalie',
                 'd_team' => 'd4_team',
@@ -434,7 +434,7 @@
         </div>
 
         <div id="tab5" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd5_skater',
                 'd_goalie' => 'd5_goalie',
                 'd_team' => 'd5_team',
@@ -452,7 +452,7 @@
         </div>
 
         <div id="tab6" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd6_skater',
                 'd_goalie' => 'd6_goalie',
                 'd_team' => 'd6_team',
@@ -470,7 +470,7 @@
         </div>
 
         <div id="tab7" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd7_skater',
                 'd_goalie' => 'd7_goalie',
                 'd_team' => 'd7_team',
@@ -488,7 +488,7 @@
         </div>
 
         <div id="tab8" class="tab-content">
-            @include('layouts._table', [
+            @include('layouts._scoreboard', [
                 'd_skater' => 'd8_skater',
                 'd_goalie' => 'd8_goalie',
                 'd_team' => 'd8_team',
@@ -518,9 +518,9 @@
         $(".tab-content").css("display", "none");
 
         $(".container-scoreboard > div:nth-child(3) > ul > li > a").click(function(e) {
-            e.preventDefault();
             $(this).parent().addClass("active");
             $(this).parent().siblings().removeClass("active");
+
             var tab = $(this).attr("href");
             $(".tab-content").not(tab).css("display", "none");
             $(tab).fadeIn();

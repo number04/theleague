@@ -46,12 +46,15 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/scoreboard-w{week_number}', 'ScoreboardController@scoreboard')->name('scoreboard');
 
+    Route::get('/standings', 'StandingController@standing')->name('standing');
+
     Route::get('/skater/{type}/{position}', 'PlayerController@skater')->name('skater');
     Route::get('/goalie/{type}/{position}', 'PlayerController@goalie')->name('goalie');
 
     Route::post('/search-skater', 'PlayerController@findSkater');
     Route::post('/search-goalie', 'PlayerController@findGoalie');
     Route::post('/filter', 'PlayerController@filter');
+
 
     Route::get('/tabs', function () {
         return view('tabs');

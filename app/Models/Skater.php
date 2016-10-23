@@ -73,10 +73,10 @@ class Skater extends Model
             return str_replace(4,"mk","mk");
         }
         if ($this->franchise_id == 5) {
-            return str_replace(5,"brbs","brbs");
+            return str_replace(5,"ssqu","ssqu");
         }
         if ($this->franchise_id == 6) {
-            return str_replace(6,"ssqu","ssqu");
+            return str_replace(6,"brbs","brbs");
         }
         if ($this->franchise_id == 7) {
             return str_replace(7,"ab","ab");

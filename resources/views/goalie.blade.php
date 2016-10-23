@@ -72,6 +72,7 @@
                <div>{{ $skater->player_pos }}</div>
                <div>
                    <span>{{ $skater->player_name_edited }}</span>
+                   <span class="schedule">({{ $skater->game_count }})</span>
                    <span class="icon-{{ $skater->injury_status }}"></span>
                </div>
                <div>{{ $skater->franchise_tag}}</div>
@@ -145,6 +146,7 @@
                 <div>{{ $goalie->player_pos }}</div>
                 <div>
                     <span>{{ $goalie->player_name }}</span>
+                     <span class="schedule">({{ $goalie->game_count }})</span>
                     <span class="icon-{{ $goalie->injury_status }}"></span>
                 </div>
                 <div>{{ $goalie->franchise_tag }}</div>

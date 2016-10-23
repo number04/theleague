@@ -29,6 +29,12 @@ class VariableRepository
             ->first()->variable;
     }
 
+    public function weekCurrent()
+    {
+        return Variable::where('variable_name', '=', 'week_current')
+            ->first()->variable;
+    }
+
     // scoreboard variables
 
     public function scoreboardDay($week_number, $day)
