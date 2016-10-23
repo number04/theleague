@@ -12,7 +12,7 @@
 
     <div class="top-links">
 
-        <a href="{{ route('standing') }}"><i class="fa fa-user-times"></i></a>
+        <a href="{{ route('standing') }}"><i class="fa fa-bar-chart"></i></a>
 
         <a href="{{ url('/scoreboard-w02') }}"><i class="icon-scoreboard"></i></a>
 
