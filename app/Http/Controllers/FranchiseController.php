@@ -175,7 +175,7 @@ class FranchiseController extends Controller
             return Redirect::route('franchise-user');
         }
 
-        if (($this->count->fullRoster($user_id) - $this->count->farmSkater($user_id) + $this->count->farmGoalie($user_id)) > 25) {
+        if (($this->count->fullRoster($user_id) - $this->count->farmSkater($user_id) - $this->count->farmGoalie($user_id)) > 25) {
             Session::flash('fail', 'The Show limit exceeded.');
             return Redirect::route('franchise-user');
         }
