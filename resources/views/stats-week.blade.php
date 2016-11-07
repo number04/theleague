@@ -4,9 +4,9 @@
 <div class="container">
     <?php
 
-    $week_number = '03';
-    $start_date = '2016-10-24';
-    $end_date = '2016-10-31';
+    $week_number = '04';
+    $start_date = '2016-10-31';
+    $end_date = '2016-11-07';
 
     // teams
 
