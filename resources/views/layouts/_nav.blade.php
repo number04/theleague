@@ -14,7 +14,7 @@
 
         <a href="{{ route('standing') }}"><i class="fa fa-bar-chart"></i></a>
 
-        <a href="{{ url('/scoreboard-w05') }}"><i class="icon-scoreboard"></i></a>
+        <a href="{{ url('/scoreboard-w06') }}"><i class="icon-scoreboard"></i></a>
 
         <a href="{{ route('franchise-user') }}"><i class="icon-{{ Auth::user()->id }}"></i></a>
     </div>

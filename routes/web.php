@@ -69,8 +69,4 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/stats-year', function () {
         return view('stats-year');
     });
-
-    Route::get('/test', function () {
-        return view('test');
-    });
 });
