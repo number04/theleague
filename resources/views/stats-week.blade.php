@@ -5,7 +5,7 @@
     <?php
 
     $week_number = '13';
-    $start_date = '2016-01-02';
+    $start_date = '2017-01-02';
     $end_date = '2017-01-09';
 
     // teams
