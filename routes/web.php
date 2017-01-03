@@ -11,8 +11,6 @@
 |
 */
 
-
-
 Auth::routes();
 
 Route::get('/register', function () {
@@ -57,11 +55,6 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/search-goalie', 'PlayerController@findGoalie');
     Route::post('/filter', 'PlayerController@filter');
 
-
-    Route::get('/tabs', function () {
-        return view('tabs');
-    });
-
     Route::get('/stats-week', function () {
         return view('stats-week');
     });
@@ -69,4 +62,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/stats-year', function () {
         return view('stats-year');
     });
+
+    // Route::get('/tabs', function () {
+    //     return view('tabs');
+    // });
+
 });
