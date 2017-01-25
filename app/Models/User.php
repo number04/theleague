@@ -39,4 +39,8 @@ class User extends Authenticatable
     public function goalie() {
         return $this->hasManyThrough(Goalie::class, Franchise::class);
     }
+
+    public function message() {
+        return $this->hasMany(Message::class);
+    }
 }
