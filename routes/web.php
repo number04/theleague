@@ -63,8 +63,13 @@ Route::group(['middleware' => ['auth']], function () {
         return view('stats-year');
     });
 
-    Route::get('/messages', 'MessageController@message')->name('message');
-    Route::get('/messages/{message}', 'MessageController@reply')->name('reply');
+    Route::get('/message-board', 'MessageController@messageBoard')->name('message-board');
+    Route::post('/message-board/post', 'MessageController@messagePost')->name('message-post');
+
+    Route::get('/message-board/{message}', 'MessageController@message')->name('message');
+    Route::post('/message-board/{message}/post', 'MessageController@replyPost')->name('reply-post');
+
+
 
 
 

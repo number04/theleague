@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateMessagesTable extends Migration
+class CreateRepliesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateMessagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('messages', function (Blueprint $table) {
+        Schema::create('replies', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('message_id')->unsigned();
             $table->integer('user_id')->unsigned();
-            $table->string('title', 30);
-            $table->text('message');
-            $table->integer('replies')->default(0);
-            $table->datetime('posted_on');
-            $table->timestamp('updated_on');
+            $table->text('reply');                    
+            $table->timestamp('posted_on');
 
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('message_id')->references('id')->on('messages');
         });
     }
 
@@ -33,6 +31,6 @@ class CreateMessagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('messages');
+        Schema::dropIfExists('replies');
     }
 }

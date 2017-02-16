@@ -1,8 +1,14 @@
 <div>
-    @foreach(${$team} as $team)
-    <div class="tr">
-        <span>{{ $team->nhl }}</span>
-        <span>({{ $team->draft }})</span>
+    <div>
+        @foreach(${$team} as $team)
+        <div class="tr">
+            <div>
+                <span>{{ $team->nhl }}</span>
+            </div>
+
+            <div>{{ $team->draft }}</div>
+            <div>{{ $team->contract }}</div>
+        </div>
+        @endforeach
     </div>
-    @endforeach
 </div>

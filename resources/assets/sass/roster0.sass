@@ -1,0 +1,112 @@
+.container-roster0
+    max-width: 768px
+    margin: auto
+    margin-top: 40px
+    @include flexbox-center
+    justify-content: space-around
+
+    > div
+        height: auto
+        width: 360px
+        text-align: center
+        border-radius: 3px
+        background-color: $white
+        align-self: flex-start
+
+        > span
+            width: 100%
+            height: 24px
+            text-transform: uppercase
+            font-weight: 200
+            font-size: 14px
+            background-color: transparent
+            border-top: 2px solid $off-white
+            border-bottom: 2px solid $off-white
+            @include flexbox-center
+
+        // position labels
+        > div
+            width: 100%
+            background-color: transparent
+
+            > ul
+                position: relative
+                margin: auto
+                height: 60px
+                margin: 0px 4px
+                width: calc(100% - 8px)
+                @include flexbox-center
+                justify-content: space-around
+
+                > li
+                    list-style: none
+
+                    &.no-show
+                        display: none
+
+                    // user icon
+                    > i
+                        font-size: 24px
+                        background-color: $grey
+                        color: $white
+                        height: 48px
+                        width: 48px
+                        border-radius: 50%
+                        @include flexbox-center
+
+                    // other franchise icon
+                    > a i
+                        font-size: 24px
+                        color: $grey
+
+                    &.active a i
+                        color: $light-grey
+
+                    &:hover a i
+                        color: $light-grey
+
+
+        // player names
+        .tr
+            text-align: center
+
+            @include flexbox-center-wrap
+
+            &.rookie > div
+                color: darken($light-grey, 10%)
+
+            &.rookie > div > span
+                color: darken($light-grey, 10%)
+
+            > div
+                height: 32px
+                line-height: 32px
+
+                // player name
+                &:nth-child(1)
+                    width: 76%
+                    text-align: left
+                    padding-left: 16px
+
+                    span
+                        font-size: 18px
+
+                        // injury icon
+                        + span
+                            color: $injury-red
+                            position: relative
+                            top: 2px
+                            font-weight: 300
+                            margin-left: 6px
+                            display: inline
+
+                // info
+                &:nth-child(n+2):nth-child(-n+3)
+                    width: 12%
+                    text-align: center
+                    text-transform: uppercase
+                    font-weight: 200
+
+@media only screen and (min-width: 1484px)
+    .container-roster0
+        max-width: 1484px

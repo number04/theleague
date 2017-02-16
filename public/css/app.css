@@ -2855,7 +2855,7 @@ div.checkbox label span {
               font-size: 18px;
               color: white; }
 
-.container-roster {
+.container-roster0 {
   max-width: 768px;
   margin: auto;
   margin-top: 40px;
@@ -2866,26 +2866,74 @@ div.checkbox label span {
   align-content: center;
   -webkit-box-pack: center;
   justify-content: center;
-  flex-wrap: wrap;
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap; }
-  .container-roster > div {
+  justify-content: space-around; }
+  .container-roster0 > div {
     height: auto;
-    width: 220px;
-    margin: 4px;
+    width: 360px;
     text-align: center;
     border-radius: 3px;
+    background-color: white;
     align-self: flex-start; }
-    .container-roster > div > span {
+    .container-roster0 > div > span {
+      width: 100%;
+      height: 24px;
       text-transform: uppercase;
-      font-weight: 500;
-      font-size: 24px;
-      margin: 4px 0px; }
-    .container-roster > div > div {
-      margin-top: 4px;
-      margin-bottom: 4px;
-      border-radius: 3px;
-      background-color: white;
+      font-weight: 200;
+      font-size: 14px;
+      background-color: transparent;
+      border-top: 2px solid #edeff0;
+      border-bottom: 2px solid #edeff0;
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      align-content: center;
+      -webkit-box-pack: center;
+      justify-content: center; }
+    .container-roster0 > div > div {
+      width: 100%;
+      background-color: transparent; }
+      .container-roster0 > div > div > ul {
+        position: relative;
+        margin: auto;
+        height: 60px;
+        margin: 0px 4px;
+        width: calc(100% - 8px);
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        justify-content: space-around; }
+        .container-roster0 > div > div > ul > li {
+          list-style: none; }
+          .container-roster0 > div > div > ul > li.no-show {
+            display: none; }
+          .container-roster0 > div > div > ul > li > i {
+            font-size: 24px;
+            background-color: #636b6f;
+            color: white;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            align-content: center;
+            -webkit-box-pack: center;
+            justify-content: center; }
+          .container-roster0 > div > div > ul > li > a i {
+            font-size: 24px;
+            color: #636b6f; }
+          .container-roster0 > div > div > ul > li.active a i {
+            color: #c7cfd3; }
+          .container-roster0 > div > div > ul > li:hover a i {
+            color: #c7cfd3; }
+    .container-roster0 > div .tr {
+      text-align: center;
       display: -webkit-box;
       display: flex;
       -webkit-box-align: center;
@@ -2896,42 +2944,34 @@ div.checkbox label span {
       flex-wrap: wrap;
       display: -webkit-flex;
       -webkit-flex-wrap: wrap; }
-      .container-roster > div > div:nth-child(2), .container-scoreboard > div:nth-child(2) > div .container-roster > div.tr > div:nth-child(9), .container-scoreboard > div:nth-child(2) > div .container-roster > div.tr > div:nth-child(13) {
-        border: 4px solid #222d3e; }
-      .container-roster > div > div:nth-child(3) {
-        border: 4px solid #175a8d; }
-      .container-roster > div > div:nth-child(4) {
-        border: 4px solid #598544; }
-      .container-roster > div > div:nth-child(5) {
-        border: 4px solid #573534; }
-      .container-roster > div > div:nth-child(6) {
-        border: 4px solid #c92336; }
-      .container-roster > div > div:nth-child(7) {
-        border: 4px solid #887a7a; }
-      .container-roster > div > div:nth-child(8) {
-        border: 4px solid #a59079; }
-      .container-roster > div > div:nth-child(9) {
-        border: 4px solid #333c73; }
-      .container-roster > div > div > div {
-        width: 100%;
-        padding: 2px 8px;
-        text-align: left; }
-        .container-roster > div > div > div:first-child {
-          padding-top: 8px; }
-        .container-roster > div > div > div:last-child {
-          padding-bottom: 8px; }
-        .container-roster > div > div > div > span:nth-child(2) {
+      .container-roster0 > div .tr.rookie > div {
+        color: #aab7bd; }
+      .container-roster0 > div .tr.rookie > div > span {
+        color: #aab7bd; }
+      .container-roster0 > div .tr > div {
+        height: 32px;
+        line-height: 32px; }
+        .container-roster0 > div .tr > div:nth-child(1) {
+          width: 76%;
+          text-align: left;
+          padding-left: 16px; }
+          .container-roster0 > div .tr > div:nth-child(1) span {
+            font-size: 18px; }
+            .container-roster0 > div .tr > div:nth-child(1) span + span {
+              color: #aa6767;
+              position: relative;
+              top: 2px;
+              font-weight: 300;
+              margin-left: 6px;
+              display: inline; }
+        .container-roster0 > div .tr > div:nth-child(n+2):nth-child(-n+3) {
+          width: 12%;
+          text-align: center;
           text-transform: uppercase;
-          font-weight: 600; }
-        .container-roster > div > div > div > span:nth-child(3) {
-          text-transform: uppercase; }
-        .container-roster > div > div > div > span:nth-child(4) {
-          position: relative;
-          top: 1px;
-          color: #aa6767; }
+          font-weight: 200; }
 
 @media only screen and (min-width: 1484px) {
-  .container-roster {
+  .container-roster0 {
     max-width: 1484px; } }
 
 /*# sourceMappingURL=app.css.map */
