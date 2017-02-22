@@ -69,6 +69,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/message-board/{message}', 'MessageController@message')->name('message');
     Route::post('/message-board/{message}/post', 'MessageController@replyPost')->name('reply-post');
 
+    Route::get('/trade', function () {
+        return view('trade');
+    });
 
 
 

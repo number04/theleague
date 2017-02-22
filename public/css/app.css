@@ -2859,6 +2859,7 @@ div.checkbox label span {
   max-width: 768px;
   margin: auto;
   margin-top: 40px;
+  margin-bottom: 40px;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -2869,31 +2870,19 @@ div.checkbox label span {
   justify-content: space-around; }
   .container-roster0 > div {
     height: auto;
-    width: 360px;
+    width: calc(50% - 2px);
     text-align: center;
     border-radius: 3px;
     background-color: white;
     align-self: flex-start; }
-    .container-roster0 > div > span {
-      width: 100%;
-      height: 24px;
-      text-transform: uppercase;
-      font-weight: 200;
-      font-size: 14px;
-      background-color: transparent;
-      border-top: 2px solid #edeff0;
-      border-bottom: 2px solid #edeff0;
-      display: -webkit-box;
-      display: flex;
-      -webkit-box-align: center;
-      align-items: center;
-      align-content: center;
-      -webkit-box-pack: center;
-      justify-content: center; }
+    .container-roster0 > div:first-of-type {
+      margin-right: 1px; }
+    .container-roster0 > div:last-of-type {
+      margin-right: 1px; }
     .container-roster0 > div > div {
       width: 100%;
       background-color: transparent; }
-      .container-roster0 > div > div > ul {
+      .container-roster0 > div > div:first-child > ul {
         position: relative;
         margin: auto;
         height: 60px;
@@ -2906,17 +2895,19 @@ div.checkbox label span {
         align-content: center;
         -webkit-box-pack: center;
         justify-content: center;
-        justify-content: space-around; }
-        .container-roster0 > div > div > ul > li {
+        flex-wrap: wrap;
+        display: -webkit-flex;
+        -webkit-flex-wrap: wrap; }
+        .container-roster0 > div > div:first-child > ul > li {
           list-style: none; }
-          .container-roster0 > div > div > ul > li.no-show {
+          .container-roster0 > div > div:first-child > ul > li.no-show {
             display: none; }
-          .container-roster0 > div > div > ul > li > i {
-            font-size: 24px;
+          .container-roster0 > div > div:first-child > ul > li > i {
+            font-size: 20px;
             background-color: #636b6f;
             color: white;
-            height: 48px;
-            width: 48px;
+            height: 40px;
+            width: 40px;
             border-radius: 50%;
             display: -webkit-box;
             display: flex;
@@ -2925,13 +2916,70 @@ div.checkbox label span {
             align-content: center;
             -webkit-box-pack: center;
             justify-content: center; }
-          .container-roster0 > div > div > ul > li > a i {
-            font-size: 24px;
-            color: #636b6f; }
-          .container-roster0 > div > div > ul > li.active a i {
-            color: #c7cfd3; }
-          .container-roster0 > div > div > ul > li:hover a i {
-            color: #c7cfd3; }
+          .container-roster0 > div > div:first-child > ul > li > a i {
+            font-size: 18px;
+            color: #636b6f;
+            background-color: white;
+            height: 30px;
+            width: 30px;
+            margin-left: 3px;
+            margin-right: 3px;
+            border-radius: 50%;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            align-content: center;
+            -webkit-box-pack: center;
+            justify-content: center; }
+          .container-roster0 > div > div:first-child > ul > li.active a i, .container-roster0 > div > div:first-child > ul > li:hover a i {
+            background-color: #636b6f;
+            color: white;
+            height: 30px;
+            width: 30px;
+            margin-left: 3px;
+            margin-right: 3px;
+            border-radius: 50%;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            align-content: center;
+            -webkit-box-pack: center;
+            justify-content: center; }
+      .container-roster0 > div > div:nth-child(n+2) > span {
+        width: 100%;
+        height: 24px;
+        text-transform: uppercase;
+        font-weight: 200;
+        font-size: 14px;
+        background-color: transparent;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        align-content: center;
+        -webkit-box-pack: center;
+        justify-content: center; }
+        .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) {
+          display: none; }
+        .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) > span {
+          font-weight: 200;
+          font-size: 12px;
+          padding-top: 3px;
+          border-top: 2px solid #edeff0; }
+          .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) > span:first-child {
+            width: 100%;
+            text-align: left;
+            padding-left: 16px; }
+          .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) > span:nth-child(n+2) {
+            width: 12%;
+            text-align: center; }
+        .container-roster0 > div > div:nth-child(n+2) > span:nth-child(n+3) {
+          border-top: 2px solid #edeff0;
+          border-bottom: 2px solid #edeff0; }
+    .container-roster0 > div .tab-content {
+      display: none; }
     .container-roster0 > div .tr {
       text-align: center;
       display: -webkit-box;
@@ -2952,26 +3000,108 @@ div.checkbox label span {
         height: 32px;
         line-height: 32px; }
         .container-roster0 > div .tr > div:nth-child(1) {
-          width: 76%;
+          width: 100%;
           text-align: left;
-          padding-left: 16px; }
+          padding-left: 6px; }
           .container-roster0 > div .tr > div:nth-child(1) span {
-            font-size: 18px; }
+            font-size: 15px; }
             .container-roster0 > div .tr > div:nth-child(1) span + span {
               color: #aa6767;
               position: relative;
               top: 2px;
               font-weight: 300;
-              margin-left: 6px;
               display: inline; }
-        .container-roster0 > div .tr > div:nth-child(n+2):nth-child(-n+3) {
+        .container-roster0 > div .tr > div:nth-child(n+2) {
+          display: none;
           width: 12%;
           text-align: center;
           text-transform: uppercase;
           font-weight: 200; }
 
-@media only screen and (min-width: 1484px) {
+@media only screen and (min-width: 375px) {
+  .container-roster0 > div > div:first-child > ul > li > a i {
+    margin-left: 6px;
+    margin-right: 6px; }
+  .container-roster0 > div > div:first-child > ul > li.active a i, .container-roster0 > div > div:first-child > ul > li:hover a i {
+    margin-left: 6px;
+    margin-right: 6px; }
+  .container-roster0 > div .tr > div:nth-child(1) {
+    padding-left: 8px; }
+    .container-roster0 > div .tr > div:nth-child(1) span {
+      font-size: 16px; }
+      .container-roster0 > div .tr > div:nth-child(1) span + span {
+        margin-left: 2px; } }
+
+@media only screen and (min-width: 414px) {
+  .container-roster0 > div > div:first-child > ul > li > a i {
+    margin-left: 9px;
+    margin-right: 9px; }
+  .container-roster0 > div > div:first-child > ul > li.active a i, .container-roster0 > div > div:first-child > ul > li:hover a i {
+    margin-left: 9px;
+    margin-right: 9px; }
+  .container-roster0 > div .tr > div:nth-child(1) {
+    padding-left: 8px; }
+    .container-roster0 > div .tr > div:nth-child(1) span {
+      font-size: 18px; }
+      .container-roster0 > div .tr > div:nth-child(1) span + span {
+        margin-left: 4px; } }
+
+@media only screen and (min-width: 507px) {
+  .container-roster0 > div > div:first-child > ul {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    justify-content: space-around; }
+    .container-roster0 > div > div:first-child > ul > li > a i {
+      margin-left: 0px;
+      margin-right: 0px; }
+    .container-roster0 > div > div:first-child > ul > li.active a i, .container-roster0 > div > div:first-child > ul > li:hover a i {
+      margin-left: 0px;
+      margin-right: 0px; }
+  .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) {
+    display: -webkit-box;
+    display: flex; }
+  .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) > span:first-child {
+    width: 76%; }
+  .container-roster0 > div > div:nth-child(n+2) > span:nth-child(2) > span:nth-child(n+2) {
+    width: 12%; }
+  .container-roster0 > div .tr > div:nth-child(1) {
+    width: 76%;
+    padding-left: 8px; }
+    .container-roster0 > div .tr > div:nth-child(1) span + span {
+      margin-left: 3px; }
+  .container-roster0 > div .tr > div:nth-child(n+2) {
+    display: inline;
+    width: 12%; } }
+
+@media only screen and (min-width: 720px) {
   .container-roster0 {
-    max-width: 1484px; } }
+    max-width: 736px; }
+    .container-roster0 > div {
+      height: auto;
+      width: calc(50% - 16px);
+      text-align: center;
+      border-radius: 3px;
+      background-color: white;
+      align-self: flex-start; }
+      .container-roster0 > div:first-of-type {
+        margin-right: 8px; }
+      .container-roster0 > div:last-of-type {
+        margin-right: 8px; }
+      .container-roster0 > div > div:first-child > ul > li > a i {
+        font-size: 20px;
+        height: 40px;
+        width: 40px; }
+      .container-roster0 > div > div:first-child > ul > li.active a i, .container-roster0 > div > div:first-child > ul > li:hover a i {
+        height: 40px;
+        width: 40px; }
+      .container-roster0 > div .tr > div:nth-child(1) {
+        padding-left: 16px; }
+        .container-roster0 > div .tr > div:nth-child(1) span + span {
+          margin-left: 3px; } }
 
 /*# sourceMappingURL=app.css.map */

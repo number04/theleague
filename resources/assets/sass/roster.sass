@@ -1,78 +1,301 @@
-.container-roster
+.container-roster0
     max-width: 768px
     margin: auto
     margin-top: 40px
-    @include flexbox-center-wrap
+    margin-bottom: 40px
+    @include flexbox-center
+    justify-content: space-around
 
     > div
         height: auto
-        width: 220px
-        margin: 4px
+        width: calc(50% - 2px)
         text-align: center
         border-radius: 3px
+        background-color: $white
         align-self: flex-start
 
-        > span
-            text-transform: uppercase
-            font-weight: 500
-            font-size: 24px
-            margin: 4px 0px
+        &:first-of-type
+            margin-right: 1px
+
+        &:last-of-type
+            margin-right: 1px
+
 
         > div
-            margin-top: 4px
-            margin-bottom: 4px
-            border-radius: 3px
-            background-color: $white
+            width: 100%
+            background-color: transparent
+
+            // franchise icons
+            &:first-child > ul
+                position: relative
+                margin: auto
+                height: 60px
+                margin: 0px 4px
+                width: calc(100% - 8px)
+                @include flexbox-center-wrap
+
+                > li
+                    list-style: none
+
+                    &.no-show
+                        display: none
+
+                    // user icon
+                    > i
+                        font-size: 20px
+                        background-color: $grey
+                        color: $white
+                        height: 40px
+                        width: 40px
+                        border-radius: 50%
+                        @include flexbox-center
+
+                    // other franchise icon
+                    > a i
+                        font-size: 18px
+                        color: $grey
+                        background-color: $white
+                        height: 30px
+                        width: 30px
+                        margin-left: 3px
+                        margin-right: 3px
+                        border-radius: 50%
+                        @include flexbox-center
+
+                    &.active a i, &:hover a i
+                        background-color: $grey
+                        color: $white
+                        height: 30px
+                        width: 30px
+                        margin-left: 3px
+                        margin-right: 3px
+                        border-radius: 50%
+                        @include flexbox-center
+
+            // player info
+            &:nth-child(n+2) > span
+                width: 100%
+                height: 24px
+                text-transform: uppercase
+                font-weight: 200
+                font-size: 14px
+                background-color: transparent
+                @include flexbox-center
+
+                &:nth-child(2)
+                    display: none
+
+                &:nth-child(2) > span
+                    font-weight: 200
+                    font-size: 12px
+                    padding-top: 3px
+                    border-top: 2px solid $off-white
+
+                    &:first-child
+                        width: 100%
+                        text-align: left
+                        padding-left: 16px
+
+                    &:nth-child(n+2)
+                        width: 12%
+                        text-align: center
+
+                &:nth-child(n+3)
+                    border-top: 2px solid $off-white
+                    border-bottom: 2px solid $off-white
+
+
+        .tab-content
+            display: none
+
+        // player info
+        .tr
+            text-align: center
+
             @include flexbox-center-wrap
 
-            &:nth-child(2)
-                border: 4px solid $franchise-1
+            &.rookie > div
+                color: darken($light-grey, 10%)
 
-            &:nth-child(3)
-                border: 4px solid $franchise-2
-
-            &:nth-child(4)
-                border: 4px solid $franchise-3
-
-            &:nth-child(5)
-                border: 4px solid $franchise-4
-
-            &:nth-child(6)
-                border: 4px solid $franchise-5
-
-            &:nth-child(7)
-                border: 4px solid $franchise-6
-
-            &:nth-child(8)
-                border: 4px solid $franchise-7
-
-            &:nth-child(9)
-                border: 4px solid $franchise-8
+            &.rookie > div > span
+                color: darken($light-grey, 10%)
 
             > div
-                width: 100%
-                padding: 2px 8px
-                text-align: left
+                height: 32px
+                line-height: 32px
 
-                &:first-child
-                    padding-top: 8px
+                // player name
+                &:nth-child(1)
+                    width: 100%
+                    text-align: left
+                    padding-left: 6px
 
-                &:last-child
-                    padding-bottom: 8px
+                    span
+                        font-size: 15px
 
-                > span
+                        // injury icon
+                        + span
+                            color: $injury-red
+                            position: relative
+                            top: 2px
+                            font-weight: 300
+                            display: inline
+
+                // info
+                &:nth-child(n+2)
+                    display: none
+                    width: 12%
+                    text-align: center
+                    text-transform: uppercase
+                    font-weight: 200
+
+@media only screen and (min-width: 375px)
+    .container-roster0
+        > div
+            > div
+                // franchise icons
+                &:first-child > ul
+                    > li
+                        // other franchise icon
+                        > a i
+                            margin-left: 6px
+                            margin-right: 6px
+
+                        &.active a i, &:hover a i
+                            margin-left: 6px
+                            margin-right: 6px
+
+            .tr
+                > div
+                    // player name
+                    &:nth-child(1)
+                        padding-left: 8px
+
+                        span
+                            font-size: 16px
+
+                            // injury icon
+                            + span
+                                margin-left: 2px
+
+@media only screen and (min-width: 414px)
+    .container-roster0
+        > div
+            > div
+                // franchise icons
+                &:first-child > ul
+                    > li
+                        // other franchise icon
+                        > a i
+                            margin-left: 9px
+                            margin-right: 9px
+
+                        &.active a i, &:hover a i
+                            margin-left: 9px
+                            margin-right: 9px
+
+            .tr
+                > div
+                    // player name
+                    &:nth-child(1)
+                        padding-left: 8px
+
+                        span
+                            font-size: 18px
+
+                            // injury icon
+                            + span
+                                margin-left: 4px
+
+@media only screen and (min-width: 507px)
+    .container-roster0
+        > div
+            > div
+                // franchise icons
+                &:first-child > ul
+                    @include flexbox-center
+                    justify-content: space-around
+
+                    > li
+                        // other franchise icon
+                        > a i
+                            margin-left: 0px
+                            margin-right: 0px
+
+                        &.active a i, &:hover a i
+                            margin-left: 0px
+                            margin-right: 0px
+
+                // player info
+                &:nth-child(n+2) > span
                     &:nth-child(2)
-                        text-transform: uppercase
-                        font-weight: 600
+                        display: flex
 
-                    &:nth-child(3)
-                        text-transform: uppercase
+                    &:nth-child(2) > span
+                        &:first-child
+                            width: 76%
 
-                    &:nth-child(4)
-                        position: relative
-                        top: 1px
-                        color: $injury-red
+                        &:nth-child(n+2)
+                            width: 12%
 
-@media only screen and (min-width: 1484px)
-    .container-roster
-        max-width: 1484px
+            // player info
+            .tr
+                > div
+                    // player name
+                    &:nth-child(1)
+                        width: 76%
+                        padding-left: 8px
+
+                        span
+                            // injury icon
+                            + span
+                                margin-left: 3px
+
+                    // info
+                    &:nth-child(n+2)
+                        display: inline
+                        width: 12%
+
+@media only screen and (min-width: 720px)
+    .container-roster0
+        max-width: 736px
+
+        > div
+            height: auto
+            width: calc(50% - 16px)
+            text-align: center
+            border-radius: 3px
+            background-color: $white
+            align-self: flex-start
+
+            &:first-of-type
+                margin-right: 8px
+
+            &:last-of-type
+                margin-right: 8px
+
+            > div
+                // franchise icons
+                &:first-child > ul
+                    > li
+                        // other franchise icon
+                        > a i
+                            font-size: 20px
+                            height: 40px
+                            width: 40px
+
+                        &.active a i, &:hover a i
+                            height: 40px
+                            width: 40px
+
+            // player info
+            .tr
+                > div
+                    // player name
+                    &:nth-child(1)
+                        padding-left: 16px
+
+                        span
+                            // injury icon
+                            + span
+                                margin-left: 3px
