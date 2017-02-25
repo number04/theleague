@@ -11,7 +11,7 @@
         </div>
 
         <div>
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -60,7 +60,7 @@
         </div>
 
         <div id="tab1" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -87,7 +87,7 @@
         </div>
 
         <div id="tab2" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -114,7 +114,7 @@
         </div>
 
         <div id="tab3" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -141,7 +141,7 @@
         </div>
 
         <div id="tab4" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -168,7 +168,7 @@
         </div>
 
         <div id="tab5" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -195,7 +195,7 @@
         </div>
 
         <div id="tab6" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -222,7 +222,7 @@
         </div>
 
         <div id="tab7" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
@@ -249,7 +249,7 @@
         </div>
 
         <div id="tab8" class="tab-content">
-            {{-- <span>needed: C,R,D</span> --}}
+            <span>needed:</span>
             <span>
                 <span>player</span>
                 <span>dft</span>
