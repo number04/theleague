@@ -63,6 +63,10 @@ Route::group(['middleware' => ['auth']], function () {
         return view('stats-year');
     });
 
+    Route::get('/stats-pos', function () {
+        return view('stats-pos');
+    });
+
     Route::get('/message-board', 'MessageController@messageBoard')->name('message-board');
     Route::post('/message-board/post', 'MessageController@messagePost')->name('message-post');
 
