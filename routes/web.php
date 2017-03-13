@@ -77,9 +77,6 @@ Route::group(['middleware' => ['auth']], function () {
         return view('trade');
     });
 
-
-
-
     // Route::get('/tabs', function () {
     //     return view('tabs');
     // });
