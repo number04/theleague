@@ -13,8 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        Commands\WeekStats::class,
-        Commands\YearStats::class,
+        Commands\UpdateStatsWeek::class,
+        Commands\UpdateStatsYear::class,
     ];
 
     /**
