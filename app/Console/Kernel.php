@@ -25,8 +25,13 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('stats:year')
-                 ->dailyAt('08:05');
+        $schedule->command('stats:week')
+                 ->dailyAt('01:25')
+                 ->timezone('America/Vancouver');
+
+        // $schedule->command('stats:week')
+        //          ->twiceDaily(20, 23)
+        //          ->timezone('America/Vancouver');
     }
 
     /**
