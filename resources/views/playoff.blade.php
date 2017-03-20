@@ -39,33 +39,33 @@
 
             @foreach($sum_d1_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d1_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d1_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -77,33 +77,33 @@
 
             @foreach($sum_d7_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d7_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d7_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -115,33 +115,33 @@
 
             @foreach($sum_d4_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d4_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d4_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -153,33 +153,33 @@
 
             @foreach($sum_d3_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d3_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d3_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -191,33 +191,33 @@
 
             @foreach($sum_d6_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d6_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d6_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -229,33 +229,33 @@
 
             @foreach($sum_d2_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d2_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d2_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -267,33 +267,33 @@
 
             @foreach($sum_d8_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d8_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d8_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
 
@@ -305,33 +305,33 @@
 
             @foreach($sum_d5_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
-                <div class="@if ($skater->goals === $top_goals) top @endif"><span></span><p>{{ $skater->goals }}</p></div>
-                <div class="@if ($skater->assists === $top_assists) top @endif"><span></span><p>{{ $skater->assists }}</p></div>
-                <div class="@if ($skater->points === $top_points) top @endif"><span></span><p>{{ $skater->points }}</p></div>
-                <div class="@if ($skater->hits === $top_hits) top @endif"><span></span><p>{{ $skater->hits }}</p></div>
-                <div class="@if ($skater->shots === $top_shots) top @endif"><span></span><p>{{ $skater->shots }}</p></div>
-                <div class="@if ($skater->faceoff_wins === $top_faceoff_wins) top @endif"><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
             @endforeach
 
             @foreach($sum_d5_goalie as $goalie)
                 <div>{{ $goalie->games_played }}</div>
 
-                <div class="@if ($goalie->saves === $top_saves) top @endif">
+                <div>
                     <span></span><p>{{ $goalie->saves }}</p>
                 </div>
 
-                <div class="@if ($goalie->save_percentage === $top_save_percentage) top @endif">
+                <div>
                     <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
                 </div>
 
-                <div class="@if ($goalie->goals_against_average === $top_goals_against_average) top @endif">
+                <div>
                     <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
                 </div>
             @endforeach
 
             @foreach($sum_d5_team as $team)
                 <div>{{ $team->games_played }}</div>
-                <div class="@if ($team->points === $top_team_points) top @endif"><span></span><p>{{ $team->points }}</p></div>
+                <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
             </div>
         </div>

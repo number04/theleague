@@ -42,7 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('/franchise/{franchise}', 'FranchiseController@franchise')->name('franchise');
 
-    Route::get('/scoreboard-w{week_number}', 'ScoreboardController@scoreboard')->name('scoreboard');
+    Route::get('/scoreboard-w{week_number}', 'PlayoffController@scoreboard')->name('scoreboard');
 
     Route::get('/standings', 'StandingController@standing')->name('standing');
 
