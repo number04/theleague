@@ -194,13 +194,13 @@ class StatRepository
     public function sumSkaterTwoWeek($user_id, $week_number, $last_week_number)
     {
         return Skater::select(DB::raw("
-                sum(skaters_stats.gp_$week_number + skaters_stats.gp_$last_week_number) as games_played,
-                sum(skaters_stats.g_$week_number + skaters_stats.g_$week_number) as goals,
-                sum(skaters_stats.a_$week_number + skaters_stats.a_$week_number) as assists,
-                sum(skaters_stats.p_$week_number + skaters_stats.p_$week_number) as points,
-                sum(skaters_stats.h_$week_number + skaters_stats.h_$week_number) as hits,
-                sum(skaters_stats.s_$week_number + skaters_stats.s_$week_number) as shots,
-                sum(skaters_stats.f_$week_number + skaters_stats.f_$week_number) as faceoff_wins"))
+                (sum(skaters_stats.gp_$week_number) + sum(skaters_stats.gp_$last_week_number)) as games_played,
+                (sum(skaters_stats.g_$week_number) + sum(skaters_stats.g_$week_number)) as goals,
+                (sum(skaters_stats.a_$week_number) + sum(skaters_stats.a_$week_number)) as assists,
+                (sum(skaters_stats.p_$week_number) + sum(skaters_stats.p_$week_number)) as points,
+                (sum(skaters_stats.h_$week_number) + sum(skaters_stats.h_$week_number)) as hits,
+                (sum(skaters_stats.s_$week_number) + sum(skaters_stats.s_$week_number)) as shots,
+                (sum(skaters_stats.f_$week_number) + sum(skaters_stats.f_$week_number)) as faceoff_wins"))
             ->join('skaters_stats', 'skaters_stats.player_id', '=', 'skaters.id')
             ->join('skaters_lineups', 'skaters_lineups.player_id', '=', 'skaters.id')
             ->where('skaters_lineups.w_'.$week_number, '=', 'd'.$user_id)
@@ -211,10 +211,12 @@ class StatRepository
     public function sumGoalieTwoWeek($user_id, $week_number, $last_week_number)
     {
         return Goalie::select(DB::raw("
-                sum(goalies_stats.gp_$week_number + goalies_stats.gp_$last_week_number) as games_played,
-                sum(goalies_stats.s_$week_number + goalies_stats.s_$last_week_number) as saves,
-                sum(goalies_stats.s_$week_number + goalies_stats.s_$last_week_number) / (sum(goalies_stats.s_$week_number + goalies_stats.s_$last_week_number) + sum(goalies_stats.g_$week_number + goalies_stats.g_$last_week_number)) as save_percentage,
-                sum(goalies_stats.g_$week_number + goalies_stats.g_$last_week_number) / (sum(goalies_stats.i_$week_number + goalies_stats.i_$last_week_number) / 60) * 60 as goals_against_average"))
+                (sum(goalies_stats.gp_$week_number) + sum(goalies_stats.gp_$last_week_number)) as games_played,
+                (sum(goalies_stats.s_$week_number) + sum(goalies_stats.s_$last_week_number)) as saves,
+                (sum(goalies_stats.s_$week_number) + sum(goalies_stats.s_$last_week_number)) /
+                ((sum(goalies_stats.s_$week_number) + sum(goalies_stats.s_$last_week_number)) +
+                (sum(goalies_stats.g_$week_number) + sum(goalies_stats.g_$last_week_number))) as save_percentage,
+                (sum(goalies_stats.g_$week_number) + sum(goalies_stats.g_$last_week_number)) / ((sum(goalies_stats.i_$week_number) + sum(goalies_stats.i_$last_week_number)) / 60) * 60 as goals_against_average"))
             ->join('goalies_stats', 'goalies_stats.player_id', '=', 'goalies.id')
             ->join('goalies_lineups', 'goalies_lineups.player_id', '=', 'goalies.id')
             ->where('goalies_lineups.w_'.$week_number, '=', 'd'.$user_id)
@@ -227,8 +229,8 @@ class StatRepository
         return Team::select(DB::raw("
                 franchise_name,
                 franchise_tag,
-                sum(teams_stats.gp_$week_number + teams_stats.gp_$last_week_number) as games_played,
-                sum(teams_stats.p_$week_number + teams_stats.p_$last_week_number) as points"))
+                (sum(teams_stats.gp_$week_number) + sum(teams_stats.gp_$last_week_number)) as games_played,
+                (sum(teams_stats.p_$week_number) + sum(teams_stats.p_$last_week_number)) as points"))
             ->join('franchises', 'franchises.id', '=', 'teams.franchise_id')
             ->join('teams_stats', 'teams_stats.player_id', '=', 'teams.id')
             ->join('teams_lineups', 'teams_lineups.player_id', '=', 'teams.id')
