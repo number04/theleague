@@ -183,6 +183,82 @@
             @endforeach
             </div>
 
+			<div class="tr">
+
+            @foreach($sum_d8_team as $team)
+                <div>{{ $team->franchise_name }}</div>
+            @endforeach
+
+            @foreach($sum_d8_skater as $skater)
+                <div>{{ $skater->games_played }}</div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+            @endforeach
+
+            @foreach($sum_d8_goalie as $goalie)
+                <div>{{ $goalie->games_played }}</div>
+
+                <div>
+                    <span></span><p>{{ $goalie->saves }}</p>
+                </div>
+
+                <div>
+                    <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
+                </div>
+
+                <div>
+                    <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
+                </div>
+            @endforeach
+
+            @foreach($sum_d8_team as $team)
+                <div>{{ $team->games_played }}</div>
+                <div><span></span><p>{{ $team->points }}</p></div>
+            @endforeach
+            </div>
+
+            <div class="tr">
+
+            @foreach($sum_d5_team as $team)
+                <div>{{ $team->franchise_name }}</div>
+            @endforeach
+
+            @foreach($sum_d5_skater as $skater)
+                <div>{{ $skater->games_played }}</div>
+                <div><span></span><p>{{ $skater->goals }}</p></div>
+                <div><span></span><p>{{ $skater->assists }}</p></div>
+                <div><span></span><p>{{ $skater->points }}</p></div>
+                <div><span></span><p>{{ $skater->hits }}</p></div>
+                <div><span></span><p>{{ $skater->shots }}</p></div>
+                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
+            @endforeach
+
+            @foreach($sum_d5_goalie as $goalie)
+                <div>{{ $goalie->games_played }}</div>
+
+                <div>
+                    <span></span><p>{{ $goalie->saves }}</p>
+                </div>
+
+                <div>
+                    <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
+                </div>
+
+                <div>
+                    <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
+                </div>
+            @endforeach
+
+            @foreach($sum_d5_team as $team)
+                <div>{{ $team->games_played }}</div>
+                <div><span></span><p>{{ $team->points }}</p></div>
+            @endforeach
+            </div>
+
             <div class="tr">
 
             @foreach($sum_d6_team as $team)
@@ -254,82 +330,6 @@
             @endforeach
 
             @foreach($sum_d2_team as $team)
-                <div>{{ $team->games_played }}</div>
-                <div><span></span><p>{{ $team->points }}</p></div>
-            @endforeach
-            </div>
-
-            <div class="tr">
-
-            @foreach($sum_d8_team as $team)
-                <div>{{ $team->franchise_name }}</div>
-            @endforeach
-
-            @foreach($sum_d8_skater as $skater)
-                <div>{{ $skater->games_played }}</div>
-                <div><span></span><p>{{ $skater->goals }}</p></div>
-                <div><span></span><p>{{ $skater->assists }}</p></div>
-                <div><span></span><p>{{ $skater->points }}</p></div>
-                <div><span></span><p>{{ $skater->hits }}</p></div>
-                <div><span></span><p>{{ $skater->shots }}</p></div>
-                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
-            @endforeach
-
-            @foreach($sum_d8_goalie as $goalie)
-                <div>{{ $goalie->games_played }}</div>
-
-                <div>
-                    <span></span><p>{{ $goalie->saves }}</p>
-                </div>
-
-                <div>
-                    <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
-                </div>
-
-                <div>
-                    <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
-                </div>
-            @endforeach
-
-            @foreach($sum_d8_team as $team)
-                <div>{{ $team->games_played }}</div>
-                <div><span></span><p>{{ $team->points }}</p></div>
-            @endforeach
-            </div>
-
-            <div class="tr">
-
-            @foreach($sum_d5_team as $team)
-                <div>{{ $team->franchise_name }}</div>
-            @endforeach
-
-            @foreach($sum_d5_skater as $skater)
-                <div>{{ $skater->games_played }}</div>
-                <div><span></span><p>{{ $skater->goals }}</p></div>
-                <div><span></span><p>{{ $skater->assists }}</p></div>
-                <div><span></span><p>{{ $skater->points }}</p></div>
-                <div><span></span><p>{{ $skater->hits }}</p></div>
-                <div><span></span><p>{{ $skater->shots }}</p></div>
-                <div><span></span><p>{{ $skater->faceoff_wins }}</p></div>
-            @endforeach
-
-            @foreach($sum_d5_goalie as $goalie)
-                <div>{{ $goalie->games_played }}</div>
-
-                <div>
-                    <span></span><p>{{ $goalie->saves }}</p>
-                </div>
-
-                <div>
-                    <span></span><p>{{ ltrim(number_format($goalie->save_percentage, 3), 0) }}</p>
-                </div>
-
-                <div>
-                    <span></span><p>{{ number_format($goalie->goals_against_average, 2) }}</p>
-                </div>
-            @endforeach
-
-            @foreach($sum_d5_team as $team)
                 <div>{{ $team->games_played }}</div>
                 <div><span></span><p>{{ $team->points }}</p></div>
             @endforeach
