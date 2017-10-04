@@ -32,7 +32,7 @@
         {{ csrf_field() }}
 
         <span>release player
-            <span>roster: {{ $count_roster }}/29</span>
+            <span>roster: {{ $count_roster }}/30</span>
         </span>
 
         <div>
@@ -58,7 +58,7 @@
         {{ csrf_field() }}
 
         <span>call up
-            <span>the show: {{ $count_show }}/25</span>
+            <span>the show: {{ $count_show }}/26</span>
         </span>
 
         <div>
@@ -136,7 +136,7 @@
         {{ csrf_field() }}
 
         <span>activate player
-            <span>roster: {{ $count_roster }}/29</span>
+            <span>roster: {{ $count_roster }}/30</span>
         </span>
 
         <div>
