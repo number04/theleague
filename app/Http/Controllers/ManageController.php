@@ -106,7 +106,7 @@ class ManageController extends Controller
             return Redirect::route('franchise-manage');
         }
 
-        if ($this->count->fullRoster($user_id) >= 29) {
+        if ($this->count->fullRoster($user_id) >= 30) {
             Session::flash('fail', 'No roster positions available.');
             return Redirect::route('franchise-manage');
         }
@@ -273,7 +273,7 @@ class ManageController extends Controller
     {
         $user_id = $request->user()->id;
 
-        if ($this->count->fullRoster($user_id) >= 29) {
+        if ($this->count->fullRoster($user_id) >= 30) {
             Session::flash('fail', 'No roster positions available.');
             return Redirect::route('franchise-manage');
         }
