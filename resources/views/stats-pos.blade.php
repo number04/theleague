@@ -6,7 +6,7 @@
 
     function skaterQuery()
     {
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/skaters/basic/season/skatersummary?cayenneExp=seasonId=20162017%20and%20gameTypeId=2');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/skaters/basic/season/skatersummary?cayenneExp=gameTypeId=%222%22%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -21,7 +21,7 @@
 
     function goalieQuery()
     {
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/goalies/goalie_basic/season/goaliesummary?cayenneExp=seasonId=20162017%20and%20gameTypeId=2');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/goalies/goalie_basic/season/goaliesummary?cayenneExp=gameTypeId=%222%22%20and%20playerPositionCode=%22G%22%20and%20seasonId%3E=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
