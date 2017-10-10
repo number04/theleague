@@ -5,13 +5,13 @@
     <?php
 
     $week_number = '02';
-    $start_date = '2017-10-08';
+    $start_date = '2017-10-09';
     $end_date = '2017-10-16';
 
     // teams
 
     function teamQuery($start_date, $end_date, $week_number)
-    {		
+    {
         $json = file_get_contents('http://www.nhl.com/stats/rest/individual/team/basic/game/teamsummary?cayenneExp=gameDate%3E=%22'.$start_date.'T07:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T06:59:59.999Z%22');
 
         $array = json_decode($json, true);
