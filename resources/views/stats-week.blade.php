@@ -49,7 +49,7 @@
             echo '<br>';
         };
 
-        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/faceoffs?cayenneExp=gameDate%3E=%22'.$start_date.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T11:00:00.000Z%22%20and%20gameTypeId=2');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/faceoffs?cayenneExp=gameDate%3E=%22'.$start_date.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T11:00:00.000Z%22%20');
         $array = json_decode($json, true);
         $data = $array["data"];
 

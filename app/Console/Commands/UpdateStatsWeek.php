@@ -34,9 +34,9 @@ class UpdateStatsWeek extends Command
     {
         parent::__construct();
 
-        $this->week = '26';
-        $this->start = '2017-04-03';
-        $this->finish = '2017-04-10';
+        $this->week = '02';
+        $this->start = '2017-10-09';
+        $this->finish = '2017-10-16';
     }
 
     /**
@@ -47,7 +47,7 @@ class UpdateStatsWeek extends Command
     public function handle()
     {
         // teams
-        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/team/basic/game/teamsummary?cayenneExp=gameDate%3E=%22'.$this->start.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$this->finish.'T11:00:00.000Z%22%20and%20gameTypeId=2&factCayenneExp=gamesPlayed%3E=1');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/team/basic/game/teamsummary?cayenneExp=gameDate%3E=%22'.$start_date.'T07:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T06:59:59.999Z%22');
 
         $array = json_decode($json, true);
         $data = $array["data"];
@@ -69,7 +69,7 @@ class UpdateStatsWeek extends Command
         };
 
         // skaters
-        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/skatersummary?cayenneExp=gameDate%3E=%22'.$this->start.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$this->finish.'T11:00:00.000Z%22%20and%20gameTypeId=2&factCayenneExp=gamesPlayed%3E=1');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/skatersummary?cayenneExp=gameDate%3E=%22'.$start_date.'T07:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T06:59:59.999Z%22%20');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -88,7 +88,7 @@ class UpdateStatsWeek extends Command
         };
 
         // faceoff wins
-        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/faceoffs?cayenneExp=gameDate%3E=%22'.$this->start.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$this->finish.'T11:00:00.000Z%22%20and%20gameTypeId=2');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/faceoffs?cayenneExp=gameDate%3E=%22'.$start_date.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T11:00:00.000Z%22%20');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -103,7 +103,7 @@ class UpdateStatsWeek extends Command
         };
 
         // hits
-        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/realtime?cayenneExp=gameDate%3E=%22'.$this->start.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$this->finish.'T11:00:00.000Z%22%20and%20gameTypeId=2');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/skaters/basic/game/realtime?cayenneExp=gameDate%3E=%22'.$start_date.'T07:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T06:59:59.999Z%22');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -118,7 +118,7 @@ class UpdateStatsWeek extends Command
         };
 
         // goalies
-        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/goalies/goalie_basic/game/goaliesummary?cayenneExp=gameDate%3E=%22'.$this->start.'T11:00:00.000Z%22%20and%20gameDate%3C=%22'.$this->finish.'T11:00:00.000Z%22%20and%20gameTypeId=2%20and%20playerPositionCode=%22G%22');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/individual/goalies/goalie_basic/game/goaliesummary?cayenneExp=gameDate%3E=%22'.$start_date.'T07:00:00.000Z%22%20and%20gameDate%3C=%22'.$end_date.'T06:59:59.999Z%22');
         $array = json_decode($json, true);
         $data = $array["data"];
 
