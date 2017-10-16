@@ -34,9 +34,9 @@ class UpdateStatsWeek extends Command
     {
         parent::__construct();
 
-        $this->week = '02';
-        $this->start = '2017-10-09';
-        $this->finish = '2017-10-16';
+        $this->week = '03';
+        $this->start = '2017-10-16';
+        $this->finish = '2017-10-23';
     }
 
     /**
