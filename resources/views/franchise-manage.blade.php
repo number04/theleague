@@ -6,7 +6,7 @@
         {{ csrf_field() }}
 
         <span>sign player
-            <span>roster: {{ $count_roster }}/29</span>
+            <span>roster: {{ $count_roster }}/30</span>
         </span>
 
         <div>
