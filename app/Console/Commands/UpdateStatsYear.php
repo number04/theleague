@@ -39,7 +39,7 @@ class UpdateStatsYear extends Command
     public function handle()
     {
         // teams
-        $json = file_get_contents('http://www.nhl.com/stats/rest/skaters?isAggregate=false&reportType=basic&isGame=false&reportName=skatersummary&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/team?isAggregate=false&reportType=basic&isGame=false&reportName=teamsummary&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
 
         $array = json_decode($json, true);
         $data = $array["data"];
@@ -61,7 +61,7 @@ class UpdateStatsYear extends Command
         };
 
         // skaters
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/skaters/basic/season/skatersummary?cayenneExp=gameTypeId=%222%22%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/skaters?isAggregate=false&reportType=basic&isGame=false&reportName=skatersummary&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -80,7 +80,7 @@ class UpdateStatsYear extends Command
         };
 
         // faceoff wins
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/skaters/basic/season/faceoffs?cayenneExp=gameTypeId=%222%22%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/skaters?isAggregate=false&reportType=basic&isGame=false&reportName=faceoffs&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -95,7 +95,7 @@ class UpdateStatsYear extends Command
         };
 
         // hits
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/skaters/basic/season/realtime?cayenneExp=gameTypeId=%222%22%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/skaters?isAggregate=false&reportType=basic&isGame=false&reportName=realtime&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
@@ -110,7 +110,7 @@ class UpdateStatsYear extends Command
         };
 
         // goalies
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/goalies/goalie_basic/season/goaliesummary?cayenneExp=gameTypeId=%222%22%20and%20playerPositionCode=%22G%22%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/goalies?isAggregate=false&reportType=goalie_basic&isGame=false&reportName=goaliesummary&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
