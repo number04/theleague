@@ -8,7 +8,7 @@
 
     function teamQuery()
     {
-        $json = file_get_contents('http://www.nhl.com/stats/rest/grouped/team/basic/season/teamsummary?cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
+        $json = file_get_contents('http://www.nhl.com/stats/rest/skaters?isAggregate=false&reportType=basic&isGame=false&reportName=skatersummary&cayenneExp=gameTypeId=2%20and%20seasonId%3E=20172018%20and%20seasonId%3C=20172018');
         $array = json_decode($json, true);
         $data = $array["data"];
 
