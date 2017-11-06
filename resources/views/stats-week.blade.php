@@ -4,9 +4,9 @@
 <div class="container">
     <?php
 
-    $week_number = '05';
-    $start_date = '2017-10-30';
-    $end_date = '2017-11-06';
+    $week_number = '06';
+    $start_date = '2017-11-06';
+    $end_date = '2017-11-13';
 
     // teams
 
@@ -76,7 +76,7 @@
     }
 
     function goalieQuery($start_date, $end_date, $week_number)
-    {		
+    {
         $json = file_get_contents('http://www.nhl.com/stats/rest/goalies?isAggregate=true&reportType=goalie_basic&isGame=true&reportName=goaliesummary&cayenneExp=gameDate%3E=%22'.$start_date.'%22%20and%20gameDate%3C=%22'.$end_date.'%22');
         $array = json_decode($json, true);
         $data = $array["data"];
