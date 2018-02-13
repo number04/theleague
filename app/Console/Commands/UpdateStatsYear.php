@@ -70,6 +70,7 @@ class UpdateStatsYear extends Command
             DB::table('skaters_stats')
             ->join('skaters', 'skaters_stats.player_id', '=', 'skaters.id')
             ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_dob', $val['playerBirthDate'])
             ->update([
                 'games_played' => $val['gamesPlayed'],
                 'goals' => $val['goals'],
@@ -89,6 +90,7 @@ class UpdateStatsYear extends Command
             DB::table('skaters_stats')
             ->join('skaters', 'skaters_stats.player_id', '=', 'skaters.id')
             ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_dob', $val['playerBirthDate'])
             ->update([
                 'faceoff_wins' => $val['faceoffsWon']
             ]);
@@ -104,6 +106,7 @@ class UpdateStatsYear extends Command
             DB::table('skaters_stats')
             ->join('skaters', 'skaters_stats.player_id', '=', 'skaters.id')
             ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_dob', $val['playerBirthDate'])
             ->update([
                 'hits' => $val['hits']
             ]);
@@ -119,6 +122,7 @@ class UpdateStatsYear extends Command
             DB::table('goalies_stats')
             ->join('goalies', 'goalies_stats.player_id', '=', 'goalies.id')
             ->where('goalies.player_name', $val['playerName'])
+            ->where('goalies.player_dob', $val['playerBirthDate'])
             ->update([
                 'games_played' => $val['gamesPlayed'],
                 'wins' => $val['wins'],

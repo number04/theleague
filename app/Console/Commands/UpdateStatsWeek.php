@@ -78,6 +78,8 @@ class UpdateStatsWeek extends Command
             DB::table('skaters_stats')
             ->join('skaters', 'skaters_stats.player_id', '=', 'skaters.id')
             ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_dob', $val['playerBirthDate'])
             ->update([
                 'gp_'.$this->week => $val['gamesPlayed'],
                 'g_'.$this->week => $val['goals'],
@@ -97,6 +99,7 @@ class UpdateStatsWeek extends Command
             DB::table('skaters_stats')
             ->join('skaters', 'skaters_stats.player_id', '=', 'skaters.id')
             ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_dob', $val['playerBirthDate'])
             ->update([
                 'f_'.$this->week => $val['faceoffsWon']
             ]);
@@ -112,6 +115,7 @@ class UpdateStatsWeek extends Command
             DB::table('skaters_stats')
             ->join('skaters', 'skaters_stats.player_id', '=', 'skaters.id')
             ->where('skaters.player_name', $val['playerName'])
+            ->where('skaters.player_dob', $val['playerBirthDate'])
             ->update([
                 'h_'.$this->week => $val['hits']
             ]);
@@ -127,6 +131,7 @@ class UpdateStatsWeek extends Command
             DB::table('goalies_stats')
             ->join('goalies', 'goalies_stats.player_id', '=', 'goalies.id')
             ->where('goalies.player_name', $val['playerName'])
+            ->where('goalies.player_dob', $val['playerBirthDate'])
             ->update([
                 'gp_'.$this->week => $val['gamesPlayed'],
                 'w_'.$this->week => $val['wins'],
