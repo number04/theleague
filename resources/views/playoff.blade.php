@@ -183,7 +183,7 @@
             @endforeach
             </div>
 
-            <hr>
+            <div class="tr line"></div>
 
 			<div class="tr">
 
