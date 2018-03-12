@@ -183,6 +183,8 @@
             @endforeach
             </div>
 
+            <hr>
+
 			<div class="tr">
 
             @foreach($sum_d5_team as $team)
