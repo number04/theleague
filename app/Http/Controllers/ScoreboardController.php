@@ -50,7 +50,7 @@ class ScoreboardController extends Controller
                 (schedules.$day_07 <> '')
             ) AS game_count";
 
-        return view('scoreboard', [
+        return view('playoff', [
 
             'sum_d1_skater' => $this->stat->sumSkater(1, $week_number),
             'sum_d1_goalie' => $this->stat->sumGoalie(1, $week_number),
