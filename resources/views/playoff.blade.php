@@ -183,7 +183,7 @@
             @endforeach
             </div>
 
-            <div class="tr line"></div>
+            <div class="tr line" style="border-top: 3px solid grey"></div>
 
 			<div class="tr">
 
