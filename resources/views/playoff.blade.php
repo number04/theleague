@@ -75,7 +75,7 @@
                 <div>{{ $team->franchise_name }}</div>
             @endforeach
 
-            @foreach($sum_d2_skater as $skater)
+            @foreach($sum_d1_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
                 <div><span></span><p>{{ $skater->goals }}</p></div>
                 <div><span></span><p>{{ $skater->assists }}</p></div>
@@ -115,7 +115,7 @@
                 <div>{{ $team->franchise_name }}</div>
             @endforeach
 
-            @foreach($sum_d1_skater as $skater)
+            @foreach($sum_d2_skater as $skater)
                 <div>{{ $skater->games_played }}</div>
                 <div><span></span><p>{{ $skater->goals }}</p></div>
                 <div><span></span><p>{{ $skater->assists }}</p></div>
